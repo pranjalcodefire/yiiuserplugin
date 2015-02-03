@@ -30,22 +30,6 @@ return [
                 ]
             ],
         ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'transport' => [
-                'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.mandrillapp.com',
-                'username' => 'pranjal@codefire.in',
-                'password' => 'mqqPrTX-lNk4YjIzlJVp0w',
-                'port' => '587',
-                'plugins' => [
-                    [
-                        'class' => 'Swift_Plugins_ThrottlerPlugin',
-                        'constructArgs' => [20],
-                    ],
-                ],    
-            ],
-        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,

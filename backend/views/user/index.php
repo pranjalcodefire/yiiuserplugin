@@ -24,7 +24,7 @@ $this->title = 'All Users';
           <th>Group(s)</th>
           <th>Email Verified</th>
           <th>Status</th>
-          <th>Created</th>
+          <th>Created At</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -38,16 +38,16 @@ $this->title = 'All Users';
                 <td><?php echo Html::encode($result->username);?></td>
                 <td id = '<?php echo 'email_verified_td'.$result->id;?>'><?php echo (Html::encode($result->email_verified) == VERIFIED) ? 'Yes' : 'No';?></td>
                 <td id = '<?php echo 'status_td'.$result->id;?>'><?php echo (Html::encode($result->status) == ACTIVE) ? 'Active' : 'Inactive';?></td>
-                <td><?php echo date(DATE_FORMAT, (Html::encode($result->created)));?></td>
+                <td><?php echo date(DATE_FORMAT, ($result->created_at));?></td>
                 <td>
                     <?php 
                         $statusClass = Html::encode($result->status == ACTIVE) ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-ban-circle';
                         $status = Html::encode($result->status == ACTIVE) ? 'Inactive' : 'Active';
-                        echo Html::a('<span class="'.$statusClass.'"></span>', 'javascript:void(0)', ['class'=>'ableToChangeStatus', 'id'=>$result->id, 'title'=>'Make this user '.$status]);
+                        echo Html::a('<span class="'.$statusClass.'"></span>', 'javascript:void(0)', ['class'=>'ableToChangeStatus', 'id'=>'ableToChangeStatus'.$result->id, 'url'=>Url::to([Yii::$app->controller->id."/status"]), 'title'=>'Make this user '.$status]);
                     ?>
                     <?php echo Html::a('<span class="glyphicon glyphicon-file"></span>', Url::to(['user/view', 'id'=>$result->id]), ['title'=>'View User Profile']);?>
                     <?php echo Html::a('<span class="glyphicon glyphicon-edit"></span>', Url::to(['user/edit', 'id'=>$result->id]), ['title'=>'Edit User Details']);?>
-                    <?php echo Html::a('<span class="glyphicon glyphicon-remove-circle"></span>', 'javascript:void(0)', ['title'=>'Delete this User', 'class'=>'ableToDelete', 'id'=>$result->id]);?>
+                    <?php echo Html::a('<span class="glyphicon glyphicon-remove-circle"></span>', 'javascript:void(0)', ['title'=>'Delete this User', 'class'=>'ableToDelete', 'id'=>'ableToDelete'.$result->id,  'url'=>Url::to([Yii::$app->controller->id."/delete"])]);?>
                     <?php if(Html::encode($result->email_verified) == NOT_VERIFIED) { 
                         echo Html::a('<span class="glyphicon glyphicon-exclamation-sign"></span>', 'javascript:void(0)', ['title'=>'Verify User Email', 'class'=>'ableToVerifyEmail', 'id'=>'ableToVerifyEmail'.$result->id]);
                     }?>
@@ -65,56 +65,8 @@ $this->title = 'All Users';
     
 </div>
 <script>
-    $('.ableToChangeStatus').click(function(){
-       if(confirm('Are you sure ?')){ 
-            var id = $(this).attr('id');
-            $.ajax({
-               url:'<?php echo Url::to([Yii::$app->controller->id."/status"])?>?id='+id,
-               type:"POST",
-               dataType:'json',
-               beforeSend:function(){    $('.loading-img').show();    },
-               success:function(response){
-                     if(response.status == 'success'){
-                         if(response.recordStatus == <?php echo ACTIVE;?>){
-                             $('#'+id+' span').attr('class', 'glyphicon glyphicon-ok');
-                             $('#'+id).attr('title', 'Make this user Inactive');
-                             $('#status_td'+id).html('Active');
-                             $('#rowId'+id).attr('class', 'success');
-                         }else{
-                             $('#'+id+' span').attr('class', 'glyphicon glyphicon-ban-circle');
-                             $('#status_td'+id).html('Inactive');
-                             $('#rowId'+id).attr('class', 'danger');
-                             $('#'+id).attr('title', 'Make this user Active');
-                         }
-                     }else{
-                         alert('Status not updated successfully');
-                     }
-               },
-               complete:function(){  $('.loading-img').hide();    },
-               error:function(){ alert('There was a problem while requesting to change status. Please try again');   }
-            });
-       }
-    });
-    $('.ableToDelete').click(function(){
-        if(confirm('Are you sure ?')){ 
-            var id = $(this).attr('id');
-            $.ajax({
-               url:'<?php echo Url::to([Yii::$app->controller->id."/delete"])?>?id='+id,
-               type:"POST",
-               dataType:'json',
-               beforeSend:function(){   $('.loading-img').show();  },
-               success:function(response){
-                     if(response.status == 'success' && response.recordDeleted == <?php echo DELETED ;?>){
-                         $('#rowId'+id).fadeOut();
-                     }else{
-                         alert('Deletion not successful');
-                     }
-               },
-               complete:function(){  $('.loading-img').hide();   },
-               error:function(){ alert('There was a problem while requesting to delete the record. Please try again');   }
-            });
-        }    
-    });
+    
+    
     $('.ableToVerifyEmail').click(function(){
         if(confirm('Are you sure ?')){ 
             var id = $(this).attr('id');

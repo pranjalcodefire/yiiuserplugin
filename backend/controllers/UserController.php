@@ -10,6 +10,8 @@ use yii\helpers\Url;
 /******Models we goona use in this controller*****/
 use common\models\User;
 use common\models\UserDetail;
+use common\models\UserGroup;
+use common\models\UserRole;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -101,7 +103,7 @@ class UserController extends Controller{
             return $this->render('index', ['results'=>$users, 'pagination'=>$pagination]);
         }else{
             Yii::$app->session->setFlash("danger", 'You have to be logged in to perform any private operation', true);
-            $this->redirect(Url::to(['user/login']));
+            return $this->redirect(Url::to(['user/login']));
         }    
     }
     
@@ -158,17 +160,25 @@ class UserController extends Controller{
     public function actionEdit($id = NULL)
     {
         if(!Yii::$app->user->isGuest){
-            $model = User::find()->innerJoinWith('userDetail')->onCondition(['users.id'=>$id])->one();
+            $model = User::find()->innerJoinWith(['userDetail', 'userRole'])->onCondition(['users.id'=>$id])->one();
             if(isset($model) && !empty($model)){
                 $model->scenario = 'editUser';
                 $model->userDetail->scenario = 'editUser';
-                if($model->load(Yii::$app->request->post()) | $model->userDetail->load(Yii::$app->request->post()) && $model->update(true) | $model->userDetail->update(true)){
-                    Yii::$app->session->setFlash("success", 'User profile has been updated successfully', true);
-                    return $this->refresh();
+                if($model->load(Yii::$app->request->post()) | $model->userDetail->load(Yii::$app->request->post())){
+                    if($model->validate() | $model->userDetail->validate()){
+                        if($model->update(false) | $model->userDetail->update(false)){
+                            Yii::$app->session->setFlash("success", 'User profile has been updated successfully', true);
+                            return $this->refresh();
+                        }    
+                    }
                 }else{
                     $genderOptions = User::findGenderOptions();
                     $maritalOptions = User::findMaritalStatusOptions();
-                    return $this->render('edit', ['model'=>$model, 'genderOptions'=>$genderOptions, 'maritalOptions'=>$maritalOptions]);
+                    $userRoles = UserGroup::find()->onCondition(['type'=>'1'])->all();
+                    foreach($userRoles as $userRole){
+                        $roles[$userRole->name] = $userRole->name;
+                    }
+                    return $this->render('edit', ['model'=>$model, 'userRoles'=>$roles, 'genderOptions'=>$genderOptions, 'maritalOptions'=>$maritalOptions]);
                 }    
             }else{
                 Yii::$app->session->setFlash("danger", 'Invalid User', true);
@@ -244,7 +254,7 @@ class UserController extends Controller{
     {
         if(!Yii::$app->user->isGuest){
             $user_id = Yii::$app->user->getId();
-            $model = User::find()->innerJoinWith('userDetail')->onCondition(['users.id'=>$user_id])->one();
+            $model = User::find()->innerJoinWith(['userDetail', 'userRole'])->onCondition(['users.id'=>$user_id])->one();
             if(isset($model) && !empty($model)){
                 $model->scenario = 'editProfile';
                 $model->userDetail->scenario = 'editProfile';
@@ -264,7 +274,7 @@ class UserController extends Controller{
             }    
         }else{
             Yii::$app->session->setFlash("danger", 'You have to be logged in to perform any private operation', true);
-            $this->redirect(Url::to(['user/login']));
+            return $this->redirect(Url::to(['user/login']));
         }  
     }
     
@@ -332,10 +342,10 @@ class UserController extends Controller{
     
     #################################### AJAX FUNCTIONS ####################################
     
-    public function actionStatus($id =  NULL)
+    public function actionStatus()
     {
         if(Yii::$app->request->isAjax){
-            $model = User::findOne($id);
+            $model = User::findOne($_POST['id']);
             if(isset($model) && !empty($model)){
                 $model->status = ($model->status == ACTIVE) ? INACTIVE : ACTIVE;
                 $model->scenario = 'statusChange';
@@ -346,9 +356,10 @@ class UserController extends Controller{
         }
     }
     
-    public function actionDelete($id =  NULL)
+    public function actionDelete()
     {
         if(Yii::$app->request->isAjax){
+            $id = $_POST['id'];
             $model = User::find()->innerJoinWith('userDetail')->onCondition(['users.id'=>$id])->one();
             if(isset($model) && !empty($model)){
                 Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;

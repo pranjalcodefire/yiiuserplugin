@@ -59,6 +59,13 @@ AppAsset::register($this);
                                 <li><a href="<?php echo Url::to(['user/save']);?>">Add New</a></li>
                             </ul>
                         </li>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="<?php echo Url::to(['user-group/index']);?>">All</a></li>
+                                <li><a href="<?php echo Url::to(['user-group/save']);?>">Add New</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<?php echo Url::to(['setting/index']);?>">Settings</a></li>
                     <?php } ?>
                     <?php if(Yii::$app->user->isGuest){ 
                         echo "<li>".Html::a("Login", Url::to(['user/login']))."</li>";

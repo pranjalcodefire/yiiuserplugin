@@ -134,6 +134,14 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->hasOne(\common\models\UserDetail::className(), ['user_id'=>'id']);
     }
     
+    /*
+     * To Associate this model to another model(here associating with "UserRole" Model)
+     * @return : the relation with model
+     */
+    public function getUserRole() 
+    {
+        return $this->hasMany(\common\models\UserRole::className(), ['user_id'=>'id']);
+    }
     #################################### MODEL BASE ####################################
     
     

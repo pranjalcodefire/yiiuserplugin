@@ -1,0 +1,22 @@
+
+
+
+#####################################	After Jan 28, 2015 	#################################
+ALTER TABLE  `users` CHANGE  `created`  `created` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ,
+CHANGE  `modified`  `modified` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL
+
+
+ALTER TABLE  `user_groups` CHANGE  `created`  `created` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ,
+CHANGE  `modified`  `modified` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL 
+
+#################################### AFTER FEB 2 , 2015 ############################################
+
+ALTER TABLE  `users` CHANGE  `created`  `created_at` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ,
+CHANGE  `modified`  `updated_at` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL
+
+ALTER TABLE  `user_details` CHANGE  `created`  `created_at` VARCHAR( 11 ) NULL DEFAULT NULL ,
+CHANGE  `modified`  `updated_at` VARCHAR( 11 ) NULL DEFAULT NULL
+
+ALTER TABLE  `user_groups` CHANGE  `created`  `created_at` VARCHAR( 11 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ,
+CHANGE  `modified`  `updated_at` VARCHAR( 11 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL
+

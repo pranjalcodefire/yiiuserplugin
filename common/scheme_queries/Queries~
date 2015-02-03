@@ -1,0 +1,10 @@
+
+
+
+#####################################	After Jan 28, 2015 	#################################
+ALTER TABLE  `users` CHANGE  `created`  `created` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ,
+CHANGE  `modified`  `modified` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL
+
+
+ALTER TABLE  `user_groups` CHANGE  `created`  `created` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL ,
+CHANGE  `modified`  `modified` VARCHAR( 10 ) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL 

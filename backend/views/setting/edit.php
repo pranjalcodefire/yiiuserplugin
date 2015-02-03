@@ -14,13 +14,7 @@ $this->title = 'Edit Profile';
     <div class="col-md-6"><?php echo Html::a('View User Profile', Url::to(['user/view', 'id'=>$model->id]), ['class'=>'btn btn-success pull-right']);?></div>
 </div>
 <?php echo Alert::widget() ?>
-<?php $form = ActiveForm::begin([
-    'id' => 'active-form',
-    'options' => [
-				'class' => 'form-horizontal',
-				'enctype' => 'multipart/form-data'
-				],
-]); ?>
+<?php $form = ActiveForm::begin();?>
 <div class="row">
     <div class="col-md-2">
         <a href="javascript:(void())" class="thumbnail">
@@ -65,17 +59,7 @@ $this->title = 'Edit Profile';
     <div class="col-md-5">
         <?php echo $form->field($model, 'email')->textInput(['placeholder'=>'Please enter your EMail Id'])->label($model->getAttributeLabel('email'));?>
         <?php //echo $form->field($model->userDetail, 'photo')->fileInput(['placeholder'=>'Please upload your photo'])->label($model->getAttributeLabel('Photo')); ?>
-        <?php echo Html::label('User Roles'); ?>
-        <?php foreach($model->userRole as $userRole) { $roleSelected[] = $userRole->item_name; } 
-              echo Html::checkboxList('userRole', $roleSelected, $userRoles, ['class'=>'checkbox']); ?>
-        
-        <?php
-        $list = [0 => 'Morning', 1 => 'Noon', 2 => 'Evening'];
-
-            /* Display an inline checkbox list */
-//            echo $form->field($model, 'item_name')->checkboxList($list, ['inline'=>true]);
-?>
-                  <?php echo Html::submitButton('Submit', ['class'=>'btn btn-success']);?>
+        <?php echo Html::submitButton('Submit', ['class'=>'btn btn-success']);?>
     </div>
 </div>
 <?php ActiveForm::end();?>

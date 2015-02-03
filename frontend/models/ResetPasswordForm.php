@@ -59,8 +59,10 @@ class ResetPasswordForm extends Model
         $user = $this->_user;
         $user->password = $this->password;
         $user->scenario = 'resetPass';
+        $user->auth_key = User::generateNewAuthKey();
+        $user->password_hash = User::setNewPassword($this->password);
         $user->removePasswordResetToken();
-        echo "<pre>";print_r($user);die;   //Here we need to make a password hash string and then we will save ,,but pending due to wait for upload(as password mail will be sending only when site is live)
+        //echo "<pre>";print_r($user);die;   //Here we need to make a password hash string and then we will save ,,but pending due to wait for upload(as password mail will be sending only when site is live)
         return $user->save();
     }
 }

@@ -69,7 +69,7 @@ $this->title = 'Profile';
         </div>
         <div class="row">
             <div class="col-md-6"><?php echo Html::label(Html::encode($model->getAttributeLabel('joined')));?></div>
-            <div class="col-md-6"><?php echo (!empty($model->created)) ? date(DATE_FORMAT, (Html::encode($model->created))) : NOT_FOUND_TEXT; ?></div>
+            <div class="col-md-6"><?php echo (!empty($model->created_at)) ? date(DATE_FORMAT, (Html::encode($model->created_at))) : NOT_FOUND_TEXT; ?></div>
         </div>
         <div class="row">
             <div class="col-md-6"><?php echo Html::label(Html::encode($model->getAttributeLabel('status')));?></div>

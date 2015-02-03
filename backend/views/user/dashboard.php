@@ -23,10 +23,26 @@ $this->title = 'Dashboard';
       </a>
     </div>
     <div class=" col-md-2">
-      <a href="<?php echo Url::to(['user/save']);?>" class="thumbnail" title='Add Users'>
+      <a href="<?php echo Url::to(['user/save']);?>" class="thumbnail" title='Add User'>
           <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
       </a>
     </div>
+    <div class=" col-md-2">
+      <a href="<?php echo Url::to(['user-group/save']);?>" class="thumbnail" title='All Groups'>
+          <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+      </a>
+    </div>
+    <div class=" col-md-2">
+      <a href="<?php echo Url::to(['user-group/save']);?>" class="thumbnail" title='Add Group'>
+          <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+      </a>
+    </div>
+    <div class=" col-md-2">
+      <a href="<?php echo Url::to(['setting/index']);?>" class="thumbnail" title='Settings'>
+          <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+      </a>
+    </div>
+    
 </div>
 
 
