@@ -73,6 +73,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Username not available'],
             ['password', 'string', 'min' => 6, 'message'=>'Please choose password of min. 6 characters'],
             ['confirm_password', 'compare', 'compareAttribute'=>'password', 'message'=>'Both passwords should match'],  //default
+            ['username', 'verifyBannedUsernames'],                                  //for user and admin both
             
             
             [['old_password', 'password', 'confirm_password'], 'required', 'on'=>'changePassword'],         //for user and admin both
@@ -383,6 +384,19 @@ class User extends ActiveRecord implements IdentityInterface
         
     }
    
+    /**
+     * To not allow the banned usernames 
+     * @param string : $attribute attribute name
+     * @param type : $params other params
+     * adds the error in error's array if banned username requested to set
+     */
+    public function verifyBannedUsernames($attribute, $params)
+    {
+        $bannedUsername = explode(',', BANNED_USERNAMES);
+        if(in_array(strtolower(trim($this->$attribute)), array_map('strtolower', array_map('trim', $bannedUsername)))){
+            $this->addError($attribute, "This username is reserved and can not be opted");
+        }
+    }
     
     #################################### USER FUNCTIONS ####################################
     

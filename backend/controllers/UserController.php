@@ -258,13 +258,11 @@ class UserController extends Controller{
             if(isset($model) && !empty($model)){
                 $model->scenario = 'editProfile';
                 $model->userDetail->scenario = 'editProfile';
-                if($model->load(Yii::$app->request->post()) | $model->userDetail->load(Yii::$app->request->post())){
-                    $filePath = 'images/'.USER_PROFILE_IMAGES_DIRECTORY.'/';
-                    $this->uploadFile($model, $filePath);
-                    if($model->update(true) | $model->userDetail->update(true)){
-                        Yii::$app->session->setFlash("success", 'Your profile has been updated successfully', true);
-                        return $this->refresh();
-                    } 
+                $filePath = 'images/'.USER_PROFILE_IMAGES_DIRECTORY.'/';
+                $this->uploadFile($model, $filePath);
+                if(($model->load(Yii::$app->request->post()) | $model->userDetail->load(Yii::$app->request->post())) & ((($model->update() | $model->userDetail->update())))){
+                    Yii::$app->session->setFlash("success", 'Your profile has been updated successfully', true);
+                    return $this->refresh();
                 } 
                 else{
                     $genderOptions = User::findGenderOptions();
