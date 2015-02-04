@@ -31,11 +31,15 @@ class Setting extends \yii\db\ActiveRecord{
     }
     
     
-    public static function getAllSettings(){
+    public function getAllSettings(){
         $results = Setting::find();
-        $pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);
-        $results = $results->orderBy('id')->all();
-        return $results;
+        /*$pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);*/
+        $settings = [];
+        $results = $results->orderBy('id')->asArray()->all();
+        foreach($results as $result){
+            $settings[$result['name']]['value'] = $result['value'];
+        }
+        return $settings;
     }
     
     

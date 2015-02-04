@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use frontend\widgets\Alert;
 use yii\captcha\Captcha;
@@ -32,6 +33,7 @@ use yii\captcha\Captcha;
                 <?php 
                     echo Html::label($model->getAttributeLabel('first_name'), 'first_name', ['class'=>'control-label']);
                     echo Html::textInput('User[first_name]', null, ['name'=>'User[first_name]', 'id'=>'user-first_name', 'placeholder'=>'Please enter your First name', 'class'=>'form-control']);
+                    echo "<div class='help-block'></div>";
                 ?>
                 </div>    
                 <div class="form-group"> 
@@ -71,6 +73,10 @@ use yii\captcha\Captcha;
             </div>
         </div>-->
     </div>
+    <div class="col-md-6">
+        <?php echo Html::a('Register Using Twitter', Url::to(['user/register-using-apis', 'using'=>'twitter']), []);?>
+    </div>
+    
 </div>
 
 

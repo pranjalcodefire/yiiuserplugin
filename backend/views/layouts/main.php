@@ -44,7 +44,7 @@ AppAsset::register($this);
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                  <a class="navbar-brand" href="<?php echo Yii::$app->homeUrl;?>">Yii Plugin</a>
+                  <a class="navbar-brand" href="<?php echo Yii::$app->homeUrl;?>"><?php echo SITE_NAME;?></a>
               </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->

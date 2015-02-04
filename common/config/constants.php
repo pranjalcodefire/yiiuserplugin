@@ -8,9 +8,10 @@
     define('NOT_VERIFIED', 0);
     define('BY_ADMIN', 1);
 
-//    $usm = new Setting;
-//    $allSettings=$usm->getAllSettings();
     
+    use common\models\Setting;
+    $allSettings=Setting::getAllSettings();
+
     date_default_timezone_set((isset($allSettings['defaultTimeZone'])) ? $allSettings['defaultTimeZone']['value'] : 'America/New_York');
     
     if(!defined("DEFAULT_PAGE_SIZE")) {define("DEFAULT_PAGE_SIZE", ((isset($allSettings['default_page_size'])) ? $allSettings['default_page_size']['value'] : 10));}
@@ -21,7 +22,7 @@
     if(!defined("APP_IMAGES_DIRECTORY")) {define("APP_IMAGES_DIRECTORY", ((isset($allSettings['app_images_directory'])) ? $allSettings['app_images_directory']['value'] : 'app_images'));}
     if(!defined("AJAX_LOADING_BIG_IMAGE")) {define("AJAX_LOADING_BIG_IMAGE", ((isset($allSettings['ajax_loading_big_image'])) ? $allSettings['ajax_loading_big_image']['value'] : 'circle-loading-animation.gif'));}
     if(!defined("DEFAULT_STATUS_FOR_NEW_USER")) {define("DEFAULT_STATUS_FOR_NEW_USER", ((isset($allSettings['default_status_for_new_user'])) ? $allSettings['default_status_for_new_user']['value'] : 1));}
-    if(!defined("DEFAULT_STATUS_FOR_NEW_RECORD")) {define("DEFAULT_STATUS_FOR_NEW_USER", ((isset($allSettings['default_status_for_new_user'])) ? $allSettings['default_status_for_new_user']['value'] : 1));}
+    
     
     
     if(!defined("SITE_NAME")) { define("SITE_NAME", ((isset($allSettings['siteName'])) ? $allSettings['siteName']['value'] : 'Yii User Management Plugin')); }

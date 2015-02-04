@@ -16,10 +16,7 @@ $this->title = 'Edit Profile';
 <?php echo Alert::widget() ?>
 <?php $form = ActiveForm::begin([
     'id' => 'active-form',
-    'options' => [
-				'class' => 'form-horizontal',
-				'enctype' => 'multipart/form-data'
-				],
+    'options' => ['enctype' => 'multipart/form-data'],
 ]); ?>
 <div class="row">
     <div class="col-md-2">
@@ -34,7 +31,7 @@ $this->title = 'Edit Profile';
         </a>
     </div>
     <div class="col-md-5">
-        <?php echo $form->field($model, 'username')->textInput(['placeholder'=>'Please enter a Username', 'class'=>'form-control', 'readOnly'=>true])->label($model->getAttributeLabel('username'));?>
+        <?php echo $form->field($model, 'username')->textInput(['placeholder'=>'Please enter a Username', 'class'=>'form-control', 'readOnly'=>!ALLOW_CHANGE_USERNAME])->label($model->getAttributeLabel('username'));?>
         <div class="row">
             <div class="col-md-6">
                 <?php echo $form->field($model, 'first_name')->textInput(['placeholder'=>'First name'])->label($model->getAttributeLabel('first_name'));?>
@@ -60,7 +57,6 @@ $this->title = 'Edit Profile';
             </div>
         </div>
         <?php echo $form->field($model->userDetail, 'location')->textInput(['placeholder'=>'Please enter your location'])->label($model->getAttributeLabel('location'));?>
-        <?php echo $form->field($model->userDetail, 'web_page')->textInput(['placeholder'=>'Please enter your webpage'])->label($model->getAttributeLabel('webpage'));?>
     </div>
     <div class="col-md-5">
         <?php echo $form->field($model, 'email')->textInput(['placeholder'=>'Please enter your EMail Id'])->label($model->getAttributeLabel('email'));?>

@@ -23,7 +23,7 @@ $this->title = 'Edit Profile';
         </a>
     </div>
     <div class="col-md-5">
-        <?php echo $form->field($model, 'username')->textInput(['placeholder'=>'Please enter a Username', 'class'=>'form-control', 'readOnly'=>true])->label($model->getAttributeLabel('username'));?>
+        <?php echo $form->field($model, 'username')->textInput(['placeholder'=>'Please enter a Username', 'class'=>'form-control', 'readOnly'=>!ALLOW_CHANGE_USERNAME])->label($model->getAttributeLabel('username'));?>
         <div class="row">
             <div class="col-md-6"><?php echo $form->field($model, 'first_name')->textInput(['placeholder'=>'First name'])->label($model->getAttributeLabel('first_name'));?></div>
             <div class="col-md-6"><?php echo $form->field($model, 'last_name')->textInput(['placeholder'=>'Last name'])->label($model->getAttributeLabel('last_name'));?></div>

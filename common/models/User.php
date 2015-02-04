@@ -86,7 +86,7 @@ class User extends ActiveRecord implements IdentityInterface
             
             
             ######Default values to go 
-            ['status', 'default', 'value' =>ACTIVE, 'on'=>['register', 'addUser']],      
+            ['status', 'default', 'value' =>DEFAULT_STATUS_FOR_NEW_USER, 'on'=>['register', 'addUser']],      
             ['by_admin', 'default', 'value' =>BY_ADMIN, 'on'=>'addUser'],      
             ['verifyCode', 'captcha', 'on'=>'register'],
             

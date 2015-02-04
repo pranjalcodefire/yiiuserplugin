@@ -143,21 +143,26 @@ class UserController extends Controller{
      */
     public function actionRegister()
     {
-        $model = new User;
-        $modelUser = new UserDetail;
-        $model->scenario = 'register';
-        if($model->load(Yii::$app->request->post())){
-            if($model->validate()){
-                $model->auth_key = User::generateNewAuthKey();
-                $model->password_hash = User::setNewPassword($model->password);
-                if($model->save(false)){
-                    $modelUser->user_id = $model->id;
-                    $modelUser->save(false) ? Yii::$app->session->setFlash('success', 'You have been registered successfully') : Yii::$app->session->setFlash('success', 'Your registration was not successful.');
-                    return $this->refresh();
+        if(NEW_REGISTRATION_IS_ALLOWED){
+            $model = new User;
+            $modelUser = new UserDetail;
+            $model->scenario = 'register';
+            if($model->load(Yii::$app->request->post())){
+                if($model->validate()){
+                    $model->auth_key = User::generateNewAuthKey();
+                    $model->password_hash = User::setNewPassword($model->password);
+                    if($model->save(false)){
+                        $modelUser->user_id = $model->id;
+                        $modelUser->save(false) ? Yii::$app->session->setFlash('success', 'You have been registered successfully') : Yii::$app->session->setFlash('success', 'Your registration was not successful.');
+                        return $this->refresh();
+                    }
                 }
             }
-        }
-        return $this->render('register', ['model'=>$model]);
+            return $this->render('register', ['model'=>$model]);
+        }else{
+            Yii::$app->session->setFlash('danger', 'Currently new registrations are not allowed by administrator. Please try later.');
+            return $this->goHome();
+        }    
     }
     
     /**
@@ -250,16 +255,24 @@ class UserController extends Controller{
         }    
     }
     
-    public function actionUpload(){
-        $model = new User;
-        if($model->load(Yii::$app->request->post())){
-            $filePath = 'images/'.USER_PROFILE_IMAGES_DIRECTORY.'/';
-            $this->uploadFile($model, $filePath);
-            echo "<pre>";print_r(Yii::$app->request->post());die;
-        }else{
-            return $this->render('abc', ['model'=>$model]);
-        }
+    public function actionRegisterUsingApis($using = NULL){
+        if(isset($using) && !empty($using))
+        {
+            switch($using){
+                case 'twitter':
+                    
+            }
+        }        
     }
+    
+    
+    #################################### USER FUNCTIONS ####################################
+    
+    
+    
+    
+    
+    ####################################  PROTECTED FUNCTIONS ####################################
     
     protected function uploadFile($model, $filePath){
         $file = \yii\web\UploadedFile::getInstance($model, 'file');
@@ -269,7 +282,10 @@ class UserController extends Controller{
         }    
     }
     
-    #################################### USER FUNCTIONS ####################################
+    #################################### PROTECTED FUNCTIONS ####################################
+    
+    
+    
     
     
 
