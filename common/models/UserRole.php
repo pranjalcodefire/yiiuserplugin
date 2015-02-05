@@ -7,7 +7,6 @@ use yii\db\ActiveRecord;
 
 class UserRole extends \yii\db\ActiveRecord{
     
-    public $item_name;
     
     public static function tableName(){
         return '{{%auth_assignment}}';

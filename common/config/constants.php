@@ -9,8 +9,8 @@
     define('BY_ADMIN', 1);
 
     
-    use common\models\Setting;
-    $allSettings=Setting::getAllSettings();
+    //use common\models\Setting;
+    //$allSettings=Setting::getAllSettings();
 
     date_default_timezone_set((isset($allSettings['defaultTimeZone'])) ? $allSettings['defaultTimeZone']['value'] : 'America/New_York');
     

@@ -63,6 +63,8 @@ AppAsset::register($this);
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="<?php echo Url::to(['user-group/index']);?>">All</a></li>
                                 <li><a href="<?php echo Url::to(['user-group/save']);?>">Add New</a></li>
+								<li><a href="<?php echo Url::to(['grouppermission/index']);?>">Group Permission</a></li>
+								<li><a href="<?php echo Url::to(['grouppermission/load']);?>">Load Actions</a></li>
                             </ul>
                         </li>
                         <li><a href="<?php echo Url::to(['setting/index']);?>">Settings</a></li>

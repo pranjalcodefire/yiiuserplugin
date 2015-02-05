@@ -13,6 +13,7 @@ use common\models\UserDetail;
 use common\models\UserGroup;
 use common\models\UserRole;
 use common\models\LoginForm;
+use common\models\AuthAssignment;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 
@@ -168,6 +169,18 @@ class UserController extends Controller{
                 $model->userDetail->scenario = 'editUser';
                 if($model->load(Yii::$app->request->post()) | $model->userDetail->load(Yii::$app->request->post())){
                     if($model->validate() | $model->userDetail->validate()){
+						if(isset(Yii::$app->request->post()['userRole'])){
+							$AuthAssignment = array();
+							$i = 0;
+							foreach(Yii::$app->request->post()['userRole'] as $key=>$value){
+								$AuthAssignment[$i]['item_name'] = $value;
+								$AuthAssignment[$i]['user_id'] = $id;
+								$AuthAssignment[$i]['created_at'] = '';
+								$i++;
+							}
+							AuthAssignment::deleteAll('user_id = :user_id', [':user_id' => $id]);
+							Yii::$app->db->createCommand()->batchInsert('auth_assignment', ['item_name', 'user_id', 'created_at'], $AuthAssignment)->execute();
+						}
                         if($model->update(false) | $model->userDetail->update(false)){
                             Yii::$app->session->setFlash("success", 'User profile has been updated successfully', true);
                             return $this->refresh();
