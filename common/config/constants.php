@@ -38,9 +38,11 @@
 	if(!defined("USE_RECAPTCHA")) {define("USE_RECAPTCHA", ((isset($allSettings['useRecaptcha'])) ? $allSettings['useRecaptcha']['value'] : 1));}
 	if(!defined("PRIVATE_KEY_FROM_RECAPTCHA_GOOGLE")) {define("PRIVATE_KEY_FROM_RECAPTCHA_GOOGLE", ((isset($allSettings['privateKeyFromRecaptcha'])) ? $allSettings['privateKeyFromRecaptcha']['value'] : ''));}
 	if(!defined("PUBLIC_KEY_FROM_RECAPTCHA_GOOLE")) {define("PUBLIC_KEY_FROM_RECAPTCHA_GOOLE", ((isset($allSettings['publicKeyFromRecaptcha'])) ? $allSettings['publicKeyFromRecaptcha']['value'] : ''));}
-	if(!defined("LOGIN_REDIRECT_URL")) {define("LOGIN_REDIRECT_URL", ((isset($allSettings['loginRedirectUrl'])) ? $allSettings['loginRedirectUrl']['value'] : '/login'));}
-	if(!defined("LOGOUT_REDIRECT_URL")) {define("LOGOUT_REDIRECT_URL", ((isset($allSettings['logoutRedirectUrl'])) ? $allSettings['logoutRedirectUrl']['value'] : '/login'));}
-	if(!defined("USE_PERMISSIONS_FOR_USERS")) {define("USE_PERMISSIONS_FOR_USERS", ((isset($allSettings['permissions'])) ? $allSettings['permissions']['value'] : 1));}
+	if(!defined("LOGIN_REDIRECT_URL_FOR_ADMIN")) {define("LOGIN_REDIRECT_URL_FOR_ADMIN", ((isset($allSettings['loginRedirectUrlForAdmin'])) ? $allSettings['loginRedirectUrlForAdmin']['value'] : ''));}
+	if(!defined("LOGOUT_REDIRECT_URL_FOR_ADMIN")) {define("LOGOUT_REDIRECT_URL_FOR_ADMIN", ((isset($allSettings['logoutRedirectUrlForAdmin'])) ? $allSettings['logoutRedirectUrlForAdmin']['value'] : ''));}
+	if(!defined("LOGIN_REDIRECT_URL_FOR_USER")) {define("LOGIN_REDIRECT_URL_FOR_USER", ((isset($allSettings['loginRedirectUrlForUser'])) ? $allSettings['loginRedirectUrlForUser']['value'] : ''));}
+	if(!defined("LOGOUT_REDIRECT_URL_FOR_USER")) {define("LOGOUT_REDIRECT_URL_FOR_USER", ((isset($allSettings['logoutRedirectUrlForUser'])) ? $allSettings['logoutRedirectUrlForUser']['value'] : ''));}
+    if(!defined("USE_PERMISSIONS_FOR_USERS")) {define("USE_PERMISSIONS_FOR_USERS", ((isset($allSettings['permissions'])) ? $allSettings['permissions']['value'] : 1));}
 	if(!defined("CHECK_PERMISSIONS_FOR_ADMIN")) {define("CHECK_PERMISSIONS_FOR_ADMIN", ((isset($allSettings['adminPermissions'])) ? $allSettings['adminPermissions']['value'] : 0));}
 	if(!defined("DEFAULT_GROUP_ID")) {define("DEFAULT_GROUP_ID", ((isset($allSettings['defaultGroupId'])) ? $allSettings['defaultGroupId']['value'] : 2));}
 	if(!defined("ADMIN_GROUP_ID")) {define("ADMIN_GROUP_ID", ((isset($allSettings['adminGroupId'])) ? $allSettings['adminGroupId']['value'] : 1));}

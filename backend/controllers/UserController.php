@@ -28,6 +28,7 @@ class UserController extends Controller{
     
     
     
+    
     #################################### ADMIN FUNCTIONS ####################################
     
     /**
@@ -41,7 +42,7 @@ class UserController extends Controller{
         }
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return (LOGIN_REDIRECT_URL_FOR_ADMIN != '') ? $this->redirect([LOGIN_REDIRECT_URL_FOR_ADMIN]) : $this->goBack();
         } 
         else {
             return $this->render('login', ['model' => $model]);
@@ -55,7 +56,8 @@ class UserController extends Controller{
     public function actionLogout()
     {
         Yii::$app->user->logout();
-        return $this->goHome();
+        Yii::$app->session->setFlash('success', 'You have been logged out successfully');
+        return (LOGOUT_REDIRECT_URL_FOR_ADMIN != '') ? $this->redirect([LOGOUT_REDIRECT_URL_FOR_ADMIN]) : $this->goBack();
     }
     
     public function actionRequestPasswordReset()
