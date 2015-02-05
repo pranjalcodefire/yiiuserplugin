@@ -22,7 +22,9 @@ use yii\captcha\Captcha;
             echo $form->field($model, 'email')->textInput(['placeholder'=>'Please enter your EMail Id'])->label($model->getAttributeLabel('email'));
             echo $form->field($model, 'password')->passwordInput(["placeholder"=>"Please enter a password"])->label($model->getAttributeLabel('password'));
             echo $form->field($model, 'confirm_password')->passwordInput(["placeholder"=>"Please re-enter your password"])->label($model->getAttributeLabel('confirm_password'));
-            echo $form->field($model, 'verifyCode')->widget(Captcha::className(), ['template' => '<div class="row"><div class="col-lg-4">{image}</div><div class="col-lg-6">{input}</div></div>']); 
+            if(USE_RECAPTCHA){
+                echo $form->field($model, 'verifyCode')->widget(Captcha::className(), ['template' => '<div class="row"><div class="col-lg-4">{image}</div><div class="col-lg-6">{input}</div></div>']); 
+            }
             echo Html::submitButton('Submit', ['class'=>'btn btn-primary']);
             ActiveForm::end();
         ?>

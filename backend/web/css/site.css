@@ -92,5 +92,6 @@ a.desc:after {
 
 
 .italic-small{
-    
+    font-style:italic;
+    font-size: 11px;
 }

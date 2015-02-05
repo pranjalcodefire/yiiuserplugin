@@ -304,7 +304,14 @@ class UserController extends Controller{
                 if($model->validate()){
                     $model->auth_key = User::generateNewAuthKey();
                     $model->password_hash = User::setNewPassword($model->password);
-                    $model->update() ? Yii::$app->session->setFlash('success', 'Your password has been changed successfullly', true) : Yii::$app->session->setFlash('danger', 'Your password NOT changed successfullly', true);
+                    if($model->update()){
+                        if(SEND_PASSWORD_CHANGE_MAIL){ 
+                            User::sendMail('change-password-email', $model, $model->email, 'Password changed for - '.SITE_NAME);
+                        }
+                        Yii::$app->session->setFlash('success', 'Your password has been changed successfullly', true);
+                    }else{
+                        Yii::$app->session->setFlash('danger', 'Your password NOT changed successfullly', true);
+                    }
                     return $this->refresh();
                 }
             }
