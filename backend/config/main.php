@@ -14,13 +14,6 @@ return [
     'modules' => [],
     //'defaultRoute'=>'user/dashboard',
     'components' => [
-        'db'=>[
-            'class'=>'yii\db\Connection',
-            'dsn'=>'mysql:host=localhost;dbname=yiiplugin',
-            'username'=>'root',
-            'password'=>'',
-            'charset'=>'utf8'
-        ],
         'urlManager'=>[
             'showScriptName'=>false,
             'enablePrettyUrl'=>true,
