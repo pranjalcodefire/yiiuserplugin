@@ -66,7 +66,7 @@ $this->title = 'All Settings';
                     }
               },
               complete:function (){$('.loading-img').hide();},
-              error:function(){ alert('There was a problem while requesting to verify email. Please try again');   }
+              error:function(){ alert('There was a problem while updating setting. Please try again');   }
            });
         }   
     });

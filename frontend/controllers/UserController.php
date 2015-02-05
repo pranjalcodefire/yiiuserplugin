@@ -264,6 +264,33 @@ class UserController extends Controller{
         }        
     }
     
+    public function actionSendVerifyEmail(){
+        $model = Yii::$app->user->getIdentity();
+        if(!empty($model)){
+            if(User::sendMail('verifyEmail', $model, $model->email, 'Verify Your Email Address for - '.SITE_NAME)){
+                Yii::$app->session->setFlash('success', 'An email has been send to <strong>'.$model->email.'</strong>. Please check your email for further instructions');
+                return $this->redirect(['user/my-profile']);
+            }
+        }
+    }
+    
+    public function actionVerifyEmail($id = NULL, $token = NULL){
+        $model = User::find()->onCondition(['id'=>$id, 'auth_key'=>$token])->one();
+        if(isset($model) && !empty($model)){
+            if($model->email_verified != VERIFIED){
+                $model->scenario = 'emailVerification';
+                $model->email_verified = VERIFIED;
+                if($model->update()){
+                    Yii::$app->session->setFlash("success", 'Your email has been verified successfully', true);
+                }
+            }else{
+                Yii::$app->session->setFlash("danger", 'Your email has been already verified. You don\'t need to do it again', true);
+            }
+        }else{
+            Yii::$app->session->setFlash("danger", 'Invalid verification link', true);
+        }    
+        return $this->redirect(['user/my-profile']);
+    }
     
     #################################### USER FUNCTIONS ####################################
     

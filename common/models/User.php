@@ -398,6 +398,14 @@ class User extends ActiveRecord implements IdentityInterface
         }
     }
     
+    public static function sendMail($templateFile, $details, $to, $subject){
+        return \Yii::$app->mailer->compose($templateFile, ['details' => $details])
+                    ->setFrom([EMAIL_FROM_ADDRESS => EMAIL_FROM_NAME]) //\Yii::$app->params['supportEmail'] => \Yii::$app->name . ' robot'
+                    ->setTo($to)
+                    ->setSubject($subject) //\Yii::$app->name
+                    ->send();
+    }
+    
     #################################### USER FUNCTIONS ####################################
     
     
