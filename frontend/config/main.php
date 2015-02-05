@@ -12,13 +12,6 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-        'db'=>[
-            'class'=>'yii\db\Connection',
-            'dsn'=>'mysql:host=localhost;dbname=yiiplugin',
-            'username'=>'root',
-            'password'=>'',
-            'charset'=>'utf8'
-        ],
         'urlManager'=>[
             'showScriptName'=>false,
             'enablePrettyUrl'=>true,
