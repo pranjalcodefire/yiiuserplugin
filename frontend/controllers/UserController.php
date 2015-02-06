@@ -154,7 +154,14 @@ class UserController extends Controller{
                     $model->password_hash = User::setNewPassword($model->password);
                     if($model->save(false)){
                         $modelUser->user_id = $model->id;
-                        $modelUser->save(false) ? Yii::$app->session->setFlash('success', 'You have been registered successfully') : Yii::$app->session->setFlash('success', 'Your registration was not successful.');
+                        if($modelUser->save(false)){
+                            if(SEND_PASSWORD_CHANGE_MAIL){ 
+                                User::sendMail('welcome-email', $model, $model->email, 'Welcome to - '.SITE_NAME);
+                            }
+                            Yii::$app->session->setFlash('success', 'You have been registered successfully');
+                        }else{
+                            Yii::$app->session->setFlash('success', 'Your registration was not successful.');
+                        }
                         return $this->refresh();
                     }
                 }
@@ -242,6 +249,9 @@ class UserController extends Controller{
                     $model->auth_key = User::generateNewAuthKey();
                     $model->password_hash = User::setNewPassword($model->password);
                     if($model->update()){
+                        if(SEND_PASSWORD_CHANGE_MAIL){ 
+                            User::sendMail('change-password-email', $model, $model->email, 'Password changed for - '.SITE_NAME);
+                        }
                         Yii::$app->session->setFlash('success', 'You password has been changed successfully', true);
                     }else{
                         Yii::$app->session->setFlash('danger', 'Your password NOT changed successfullly', true);
@@ -284,7 +294,7 @@ class UserController extends Controller{
                     Yii::$app->session->setFlash("success", 'Your email has been verified successfully', true);
                 }
             }else{
-                Yii::$app->session->setFlash("danger", 'Your email has been already verified. You don\'t need to do it again', true);
+                    Yii::$app->session->setFlash("danger", 'Your email has been already verified. You don\'t need to do it again', true);
             }
         }else{
             Yii::$app->session->setFlash("danger", 'Invalid verification link', true);
@@ -292,6 +302,7 @@ class UserController extends Controller{
         return $this->redirect(['user/my-profile']);
     }
     
+       
     #################################### USER FUNCTIONS ####################################
     
     
@@ -317,7 +328,23 @@ class UserController extends Controller{
 
 
     #################################### AJAX FUNCTIONS ####################################
-    
+ 
+    public function actionDeleteMyAccount(){
+        if(Yii::$app->request->isAjax){
+            $id = Yii::$app->user->getId();
+            $model = User::find()->innerJoinWith('userDetail')->onCondition(['users.id'=>$id])->one();
+            if(isset($model) && !empty($model)){
+                Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                if(($model->delete($id) && UserDetail::deleteAll(['user_id'=>$id]))){
+                    Yii::$app->session->setFlash("success", 'Your account has been deleted successfully from the <strong>'.SITE_NAME.'</strong>. ', true);
+                    return ['status'=>'success', 'redirectUrl'=>Url::to(['user/login'])];
+                }else{
+                    return ['status'=>'failure'];
+                }
+            }    
+        }
+    }
+ 
     #################################### AJAX FUNCTIONS ####################################
     
 }

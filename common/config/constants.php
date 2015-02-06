@@ -9,8 +9,8 @@
     define('BY_ADMIN', 1);
 
     
-    //use common\models\Setting;
-    //$allSettings=Setting::getAllSettings();
+    use common\models\Setting;
+    $allSettings=Setting::getAllSettings();
 
     date_default_timezone_set((isset($allSettings['defaultTimeZone'])) ? $allSettings['defaultTimeZone']['value'] : 'America/New_York');
     
@@ -27,7 +27,7 @@
     
     if(!defined("SITE_NAME")) { define("SITE_NAME", ((isset($allSettings['siteName'])) ? $allSettings['siteName']['value'] : 'Yii User Management Plugin')); }
 	if(!defined("NEW_REGISTRATION_IS_ALLOWED")) { define("NEW_REGISTRATION_IS_ALLOWED", ((isset($allSettings['siteRegistration'])) ? $allSettings['siteRegistration']['value'] : 1));}
-	if(!defined("ALLOW USERS TO DELETE ACCOUNT")) {define("ALLOW USERS TO DELETE ACCOUNT", ((isset($allSettings['allowDeleteAccount'])) ? $allSettings['allowDeleteAccount']['value'] : 0));}
+	if(!defined("ALLOW_USERS_TO_DELETE_ACCOUNT")) {define("ALLOW_USERS_TO_DELETE_ACCOUNT", ((isset($allSettings['allowDeleteAccount'])) ? $allSettings['allowDeleteAccount']['value'] : 0));}
 	if(!defined("SEND_REGISTRATION_MAIL")) {define("SEND_REGISTRATION_MAIL", ((isset($allSettings['sendRegistrationMail'])) ? $allSettings['sendRegistrationMail']['value'] : 1));}	
 	if(!defined("SEND_PASSWORD_CHANGE_MAIL")) {define("SEND_PASSWORD_CHANGE_MAIL", ((isset($allSettings['sendPasswordChangeMail'])) ? $allSettings['sendPasswordChangeMail']['value'] : 1));}	
 	if(!defined("EMAIL_VERIFICATION")) {define("EMAIL_VERIFICATION", ((isset($allSettings['emailVerification'])) ? $allSettings['emailVerification']['value'] : 1));}

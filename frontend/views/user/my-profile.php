@@ -15,7 +15,10 @@ $this->title = 'Profile';
         <h3><strong>Welcome <?php echo (!empty($model->first_name)) ? (Html::encode($model->first_name).', ') : ''; ?></strong></h3>
     </div>
     <div class="col-md-6" style="margin-top:10px;">
-        <?php echo Html::a('Edit Profile', Url::to(['user/edit-profile']), ['class'=>'btn btn-success pull-right']);?>
+        <?php if(ALLOW_USERS_TO_DELETE_ACCOUNT){
+            echo Html::a('Delete My Account', 'javascript:void(0)', ['title'=>'This will delete your account', 'class'=>'ableToDeleteMyAccount btn btn-success pull-right', 'style'=>'margin-left:10px;',  'url'=>Url::to([Yii::$app->controller->id."/delete-my-account"])]);
+        }?>
+        <?php echo Html::a('Edit Profile', Url::to(['user/edit-profile']), ['class'=>'btn btn-success pull-right']) ;?>
     </div>
 </div>
 <div class="row">
@@ -48,6 +51,8 @@ $this->title = 'Profile';
             <div class="col-md-6"><?php echo (!empty($model->email)) ? (Html::encode($model->email)) : NOT_FOUND_TEXT; ?>
                 <?php if(EMAIL_VERIFICATION && $model->email_verified == NOT_VERIFIED){
                     echo Html::a('Veify Email', Url::to(['user/send-verify-email', 'id'=>$model->id, 'verifyStr'=>$model->auth_key]), ['class'=>'italic-small']);
+                }else{
+                    echo Html::tag('span', '(verified)', ['class'=>'italic-small']);
                 }?>
             </div>
         </div>

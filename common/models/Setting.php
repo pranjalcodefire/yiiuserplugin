@@ -31,7 +31,7 @@ class Setting extends \yii\db\ActiveRecord{
     }
     
     
-    public function getAllSettings(){
+    public static function getAllSettings(){
         $results = Setting::find();
         /*$pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);*/
         $settings = [];

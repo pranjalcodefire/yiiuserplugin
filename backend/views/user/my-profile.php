@@ -43,8 +43,10 @@ $this->title = 'Profile';
             <div class="col-md-6"><?php echo Html::label(Html::encode($model->getAttributeLabel('email')));?></div>
             <div class="col-md-6">
                 <?php echo (!empty($model->email)) ? (Html::encode($model->email)) : NOT_FOUND_TEXT; ?>
-                <?php if($model->email_verified == NOT_VERIFIED){
-                    echo Html::a('Veify Email', Url::to(['user/send-verify-email', 'id'=>$model->id, 'verifyStr'=>$model->auth_key]), []);
+                <?php if(EMAIL_VERIFICATION && $model->email_verified == NOT_VERIFIED){
+                    echo Html::a('Veify Email', Url::to(['user/send-verify-email', 'id'=>$model->id, 'verifyStr'=>$model->auth_key]), ['class'=>'italic-small']);
+                }else{
+                    echo Html::tag('span', '(verified)', ['class'=>'italic-small']);
                 }?>
             </div>
         </div>

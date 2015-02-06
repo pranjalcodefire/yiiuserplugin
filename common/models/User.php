@@ -66,6 +66,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function rules() 
     {
+        $useCaptcha = USE_RECAPTCHA ? ['register'] : [];
         return [
             [['first_name', 'last_name','username', 'email', 'password', 'confirm_password'], 'required'],    //default
             ['email', 'email', 'message'=>'Please enter a valid email address'],        //default
@@ -89,7 +90,7 @@ class User extends ActiveRecord implements IdentityInterface
             ######Default values to go 
             ['status', 'default', 'value' =>DEFAULT_STATUS_FOR_NEW_USER, 'on'=>['register', 'addUser']],      
             ['by_admin', 'default', 'value' =>BY_ADMIN, 'on'=>'addUser'],      
-            ['verifyCode', 'captcha', 'on'=>'register'],
+            ['verifyCode', 'captcha', 'on'=>$useCaptcha],
             
             
 //            ['status', 'in', 'range' => [ACTIVE, DELETED]],
@@ -105,9 +106,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function scenarios() 
     {
+        $register = USE_RECAPTCHA ? ['first_name', 'last_name', 'username', 'password', 'confirm_password', 'email', 'status', 'verifyCode'] : ['first_name', 'last_name', 'username', 'password', 'confirm_password', 'email', 'status'];
         return [
             'login'=>['email', 'password'],
-            'register'=>['first_name', 'last_name', 'username', 'password', 'confirm_password', 'email', 'status', 'verifyCode'],
+            'register'=>$register,
             'changePassword'=>['old_password', 'password', 'confirm_password'],
             'editProfile'=>['first_name', 'last_name','username', 'email'],
             
