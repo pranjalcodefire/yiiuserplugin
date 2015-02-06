@@ -3539,3 +3539,1595 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1423202345.753
     'REQUEST_TIME' => 1423202345
 ]
+2015-02-06 06:06:51 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:06:51 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50428'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423202811.29
+    'REQUEST_TIME' => 1423202811
+]
+2015-02-06 06:07:21 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:07:21 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50450'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423202841.06
+    'REQUEST_TIME' => 1423202841
+]
+2015-02-06 06:07:33 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:07:33 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50451'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423202853.429
+    'REQUEST_TIME' => 1423202853
+]
+2015-02-06 06:07:36 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:07:36 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50452'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423202856.007
+    'REQUEST_TIME' => 1423202856
+]
+2015-02-06 06:10:15 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:10:15 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50476'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203015.946
+    'REQUEST_TIME' => 1423203015
+]
+2015-02-06 06:10:19 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:10:19 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50479'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203019.765
+    'REQUEST_TIME' => 1423203019
+]
+2015-02-06 06:11:29 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:11:29 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50494'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203089.168
+    'REQUEST_TIME' => 1423203089
+]
+2015-02-06 06:12:30 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(6): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:12:30 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50545'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203150.7
+    'REQUEST_TIME' => 1423203150
+]
+2015-02-06 06:18:46 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\components\Yii' not found' in C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php:6
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#10 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#11 {main}
+2015-02-06 06:18:46 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50719'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203526.567
+    'REQUEST_TIME' => 1423203526
+]
+2015-02-06 06:19:20 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(7): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:19:20 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50720'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203560.415
+    'REQUEST_TIME' => 1423203560
+]
+2015-02-06 06:19:32 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(7): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:19:32 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50721'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203572.271
+    'REQUEST_TIME' => 1423203572
+]
+2015-02-06 06:19:53 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(8): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:19:53 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50722'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203593.052
+    'REQUEST_TIME' => 1423203593
+]
+2015-02-06 06:20:11 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(7): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:20:11 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50725'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203611.663
+    'REQUEST_TIME' => 1423203611
+]
+2015-02-06 06:20:38 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(7): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:20:38 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50726'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203638.235
+    'REQUEST_TIME' => 1423203638
+]
+2015-02-06 06:21:07 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(7): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:21:07 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50729'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203667.651
+    'REQUEST_TIME' => 1423203667
+]
+2015-02-06 06:21:24 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(8): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:21:24 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50730'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203684.222
+    'REQUEST_TIME' => 1423203684
+]
+2015-02-06 06:21:25 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(8): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:21:25 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50732'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203685.76
+    'REQUEST_TIME' => 1423203685
+]
+2015-02-06 06:22:19 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant LOGIN_URL - assumed 'LOGIN_URL'' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php:364
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(71): yii\di\ServiceLocator->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(8): yii\di\ServiceLocator->__get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#15 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#16 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#17 {main}
+2015-02-06 06:22:19 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50735'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203739.318
+    'REQUEST_TIME' => 1423203739
+]
+2015-02-06 06:23:01 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant ACTIVE - assumed 'ACTIVE'' in C:\wamp\www\yump-new\yiiuserplugin\common\models\User.php:199
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\User.php(356): yii\web\User->getIdentity()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\User.php(662): yii\web\User->getId()
+#3 C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php(8): yii\web\User->can()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#13 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#14 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#15 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#16 {main}
+2015-02-06 06:23:01 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 96
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50737'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203781.325
+    'REQUEST_TIME' => 1423203781
+]
+2015-02-06 06:25:24 [::1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'include_once(../config/constants.php): failed to open stream: No such file or directory' in C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php:4
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(408): ReflectionClass->__construct()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(354): yii\di\Container->getDependencies()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#11 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#12 {main}
+2015-02-06 06:25:24 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50742'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203924.953
+    'REQUEST_TIME' => 1423203924
+]
+2015-02-06 06:25:35 [::1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'include_once(config/constants.php): failed to open stream: No such file or directory' in C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php:4
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(408): ReflectionClass->__construct()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(354): yii\di\Container->getDependencies()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#11 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#12 {main}
+2015-02-06 06:25:35 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50744'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203935.348
+    'REQUEST_TIME' => 1423203935
+]
+2015-02-06 06:26:03 [::1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'include_once(../config/constants.php): failed to open stream: No such file or directory' in C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php:4
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(0): yii\BaseYii::autoload()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(408): ReflectionClass->__construct()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(354): yii\di\Container->getDependencies()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#11 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#12 {main}
+2015-02-06 06:26:03 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50745'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423203963.597
+    'REQUEST_TIME' => 1423203963
+]
+2015-02-06 01:27:14 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: yii\web\Application::action' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(73): yii\base\Component->__get('action')
+#1 C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php(9): yii\di\ServiceLocator->__get('action')
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): common\components\MyGlobalClass->init()
+#3 [internal function]: yii\base\Object->__construct(Array)
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('common\componen...', Array, Array)
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('common\componen...', Array, Array)
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get('MyGlobalClass')
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#11 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#12 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct(Array)
+#13 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct(Array)
+#14 {main}
+2015-02-06 01:27:14 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/login'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50802'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423204034.539
+    'REQUEST_TIME' => 1423204034
+]
+2015-02-06 01:28:11 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Use of undefined constant Yii - assumed 'Yii'' in C:\wamp\www\yump-new\yiiuserplugin\common\components\MyGlobalClass.php:9
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): yii\base\Object->__construct()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\di\ServiceLocator.php(133): yii\BaseYii::createObject()
+#5 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(302): yii\di\ServiceLocator->get()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct()
+#10 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(19): yii\base\Application->__construct()
+#11 {main}
+2015-02-06 01:28:11 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => 'vc4b5nm1tim5f4tm600jdc00d5'
+    '_csrf' => 'aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas:32:\"n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=vc4b5nm1tim5f4tm600jdc00d5; _csrf=aa1b20af332215008d8c41c70d31d517d8bcf89bb6aa31b7f209d006e11c56eas%3A32%3A%22n4vD4ZyLihD-G90GGt5dwSZzHNY8ZjJV%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '50813'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423204091.475
+    'REQUEST_TIME' => 1423204091
+]
