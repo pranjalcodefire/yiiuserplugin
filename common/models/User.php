@@ -407,6 +407,27 @@ class User extends ActiveRecord implements IdentityInterface
                     ->setSubject($subject) //\Yii::$app->name
                     ->send();
     }
+	
+	public static function CheckPermission($event){
+		$method = $event->action->actionMethod;
+		$methodName = substr($method, 6);
+		$objectName = get_class($event->action->controller);
+		$class = explode('\\', $objectName);
+		$mode = $class[0];
+		$className = $class[2];
+		$className = substr($className, 0, -10);
+		$dbAction = $mode.':'.$className.':'.$methodName;
+		$status = false;
+		if (Yii::$app->user->can($dbAction)) {
+			$status = true;
+		}
+		//print_r($methodName); exit;
+		if($methodName=='PermissionDenied' || $methodName=='Login'){
+			return true;
+		}else{
+			return $status;
+		}
+	}
     
     #################################### USER FUNCTIONS ####################################
     
