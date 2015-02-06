@@ -118,6 +118,33 @@ $("#userRoleChild").click(function (){
 });
 
 
+$('.ableToLogoutUser').click(function(){
+    if(confirm('This user will be logged out from the moment. Are you sure ?')){ 
+         var id = $(this).attr('id');
+         var url = $(this).attr('url');
+         var recordId  = id.split('ableToLogoutUser')[1];
+         $.ajax({
+            url:url,
+            type:"POST",
+            data:'id='+recordId,
+            dataType:'json',
+            beforeSend:function(){    $('.loading-img').show();    },
+            success:function(response){
+                  if(response.status == 'success'){
+                      if(response.recordLoggedout == 1){
+                          $('#'+id+' span').attr('style', 'display:none;');
+                          $('#rowId'+recordId).attr('class', 'danger');
+                      }
+                  }else{
+                      alert('User has been logged out successfully');
+                  }
+            },
+            complete:function(){  $('.loading-img').hide();    },
+            error:function(){ alert('There was a problem while logging out the user. Please try again');   }
+         });
+    }
+ });
+
 
 
 
