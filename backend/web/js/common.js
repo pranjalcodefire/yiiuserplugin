@@ -68,10 +68,12 @@ $("#userRoleParent").change(function (){
 	   success:function(response){
 			 $("#userRoleChild").html(response);
 				var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+				var allControllerMode = $("#allControllerMode").val();
+				var controller = $("#allControllerFilter").val();
 				$.ajax({
 				   url:url,
 				   type:"POST",
-				   data:'id='+id,
+				   data:'id='+id+'&controllerMode='+allControllerMode+'&controller='+controller,
 				   //dataType:'json',
 				   beforeSend:function(){   $('#window_progress').show();  },
 				   success:function(response){
@@ -98,11 +100,13 @@ $("#userRoleParent").change(function (){
 $("#userRoleChild").click(function (){
 	var parentId = $("#userRoleParent").val();
 	var childId = $(this).val();
+	var controller = $("#allControllerFilter").val();
+	var allControllerMode = $("#allControllerMode").val();
 	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
 	$.ajax({
 	   url:url,
 	   type:"POST",
-	   data:'id='+parentId+'&child='+childId,
+	   data:'id='+parentId+'&child='+childId+'&controllerMode='+allControllerMode+'&controller='+controller,
 	   //dataType:'json',
 	   beforeSend:function(){   $('#window_progress').show();  },
 	   success:function(response){
@@ -117,6 +121,53 @@ $("#userRoleChild").click(function (){
 	});
 });
 
+$("#allControllerMode").change(function (){
+	var id = $(this).val();
+	var controller = $("#allControllerFilter").val();
+	var childRole = $("#userRoleChild").val();
+	var parentId = $("#userRoleParent").val();
+	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+	$.ajax({
+	   url:url,
+	   type:"POST",
+	   data:'controllerMode='+id+'&controller='+controller+'&child='+childRole+'&id='+parentId,
+	   //dataType:'json',
+	   beforeSend:function(){   $('#window_progress').show();  },
+	   success:function(response){
+			 $("#permissionSectionBody tbody").html(response);
+	   },
+	   complete:function(){
+			$('#window_progress').hide();  
+	   },
+	   error:function(){ 
+			alert('There was a problem while requesting to delete the record. Please try again');   
+	   }
+	});
+});
+
+$("#allControllerFilter").change(function (){
+	var id = $(this).val();
+	var mode = $("#allControllerMode").val();
+	var childRole = $("#userRoleChild").val();
+	var parentId = $("#userRoleParent").val();
+	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+	$.ajax({
+	   url:url,
+	   type:"POST",
+	   data:'controller='+id+'&controllerMode='+mode+'&child='+childRole+'&id='+parentId,
+	   //dataType:'json',
+	   beforeSend:function(){   $('#window_progress').show();  },
+	   success:function(response){
+			 $("#permissionSectionBody tbody").html(response);
+	   },
+	   complete:function(){
+			$('#window_progress').hide();  
+	   },
+	   error:function(){ 
+			alert('There was a problem while requesting to delete the record. Please try again');   
+	   }
+	});
+});
 
 
 

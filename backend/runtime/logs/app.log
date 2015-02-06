@@ -5131,3 +5131,545 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1423204091.475
     'REQUEST_TIME' => 1423204091
 ]
+2015-02-06 02:46:09 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: childChildAction' in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:204
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2015-02-06 02:46:09 [::1][-][-][info][application] $_POST = [
+    'controllerMode' => '0'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'eGJFcnROcksPGyg7JDwXIkhQNTE4eDB5KxEHCkUJLXwZAxUqMzdDGA=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'CONTENT_LENGTH' => '16'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52166'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423208769.92
+    'REQUEST_TIME' => 1423208769
+]
+2015-02-06 02:46:29 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: childChildAction' in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:204
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2015-02-06 02:46:28 [::1][-][-][info][application] $_POST = [
+    'controllerMode' => '1'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'NldkNzJlN25BLgl.YhdSBwZlFHR.U3VcZSQmTwMiaFlXNjRvdRwGPQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'CONTENT_LENGTH' => '16'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52194'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423208788.925
+    'REQUEST_TIME' => 1423208788
+]
+2015-02-06 02:58:40 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '||' (T_BOOLEAN_OR), expecting ')'' in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:164
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(563): ::class_exists()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(521): yii\base\Module->createControllerByID()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(449): yii\base\Module->createController()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2015-02-06 02:58:40 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/user/dashboard'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52300'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423209520.804
+    'REQUEST_TIME' => 1423209520
+]
+2015-02-06 03:00:13 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: controller' in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:166
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2015-02-06 03:00:13 [::1][-][-][info][application] $_POST = [
+    'controllerMode' => 'backend'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'ZXhZUWc1TmoSATQYN0crA1VKKRIrAwxYNgsbKVZyEV0EGQkJIEx/OQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'CONTENT_LENGTH' => '22'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52338'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423209613.673
+    'REQUEST_TIME' => 1423209613
+]
+2015-02-06 03:00:23 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: controller' in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:166
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2015-02-06 03:00:23 [::1][-][-][info][application] $_POST = [
+    'controllerMode' => 'backend'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'Tm1wUDdTUHY5FB0ZZyE1H35fABN7ZRJEHR4yKAYUD0EvDCAIcCphJQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'CONTENT_LENGTH' => '22'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52340'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423209623.804
+    'REQUEST_TIME' => 1423209623
+]
+2015-02-06 03:04:30 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: controllerMode' in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:167
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): ::call_user_func_array()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams()
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction()
+#4 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest()
+#5 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2015-02-06 03:04:30 [::1][-][-][info][application] $_POST = [
+    'controllerMode' => 'backend'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'bjljM0xDb0wZQA56HDEKJV4LE3AAdS1.PUohS30EMHsPWDNrCzpeHw=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'CONTENT_LENGTH' => '22'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52356'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423209870.851
+    'REQUEST_TIME' => 1423209870
+]
+2015-02-06 03:05:05 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Command.php:821
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Command.php(821): PDOStatement->execute()
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php(172): yii\db\ActiveQuery->all()
+#5 [internal function]: backend\controllers\GroupPermissionController->actionGetRolePermission()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('get-role-permis...', Array)
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('group-permissio...', Array)
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+The SQL being executed was: SELECT * FROM `auth_item` WHERE (`type`=2) AND (name like 'backend%' or name like :name2)' in C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Schema.php:532
+Stack trace:
+#0 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Command.php(836): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#3 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\db\ActiveQuery.php(130): yii\db\Query->all(NULL)
+#4 C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php(172): yii\db\ActiveQuery->all()
+#5 [internal function]: backend\controllers\GroupPermissionController->actionGetRolePermission()
+#6 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('get-role-permis...', Array)
+#9 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('group-permissio...', Array)
+#10 C:\wamp\www\yump-new\yiiuserplugin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp\www\yump-new\yiiuserplugin\backend\web\index.php(21): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => HY093
+    [1] => 0
+)
+
+2015-02-06 03:05:05 [::1][-][-][info][application] $_POST = [
+    'controllerMode' => 'backend'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.232271990.1418124123.1423121057.1423133338.90'
+    '__utmz' => '111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'fbm_753538878042391' => 'base_domain=.localhost'
+    'heronetwork' => 'a9da673179f4f28506993a53f2edbd9279fe86cas:17:\"{\"loggedout\":\"1\"}\";'
+    'PHPSESSID' => '96fks1u6eco9iis3rma4p49cc4'
+    '_csrf' => '12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs:32:\"wymIPrei02pCL6B2SsBx1G_7aaPXGy1S\";'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_X_CSRF_TOKEN' => 'bmNmUkpteG8ZGgsbGh8dBl5RFhEGWzpdPRAkKnsqJ1gPAjYKDRRJPA=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://localhost/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'CONTENT_LENGTH' => '22'
+    'HTTP_COOKIE' => '__utma=111872281.232271990.1418124123.1423121057.1423133338.90; __utmz=111872281.1418124123.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); fbm_753538878042391=base_domain=.localhost; heronetwork=a9da673179f4f28506993a53f2edbd9279fe86cas%3A17%3A%22%7B%22loggedout%22%3A%221%22%7D%22%3B; PHPSESSID=96fks1u6eco9iis3rma4p49cc4; _csrf=12d13ca7554f19045600c97d9f8d5dcd4e8c531b6e4a055e07b51c746e3d49dcs%3A32%3A%22wymIPrei02pCL6B2SsBx1G_7aaPXGy1S%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52370'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423209905.428
+    'REQUEST_TIME' => 1423209905
+]
+2015-02-06 05:11:27 [192.168.1.115][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.1.115
+    in C:\wamp\www\yump-new\yiiuserplugin\backend\views\layouts\main.php:100
+    in C:\wamp\www\yump-new\yiiuserplugin\backend\controllers\GroupPermissionController.php:80
+2015-02-06 05:11:27 [192.168.1.115][-][-][info][application] $_COOKIE = [
+    '__utma' => '10405493.1564602361.1418994712.1419314417.1419427729.3'
+    '__utmz' => '10405493.1418994712.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf' => '49af7e8409f20743f7844f71db8adf6901c9ef6b4b48c4908ee0141f5c9179c4s:32:\"v6njaz4ZEMQYD8UTnnAHBNkHQui39LCQ\";'
+    'PHPSESSID' => 'v8fm7sl79rud5rt2b7sq02bek1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => '192.168.1.94'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => '__utma=10405493.1564602361.1418994712.1419314417.1419427729.3; __utmz=10405493.1418994712.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=49af7e8409f20743f7844f71db8adf6901c9ef6b4b48c4908ee0141f5c9179c4s%3A32%3A%22v6njaz4ZEMQYD8UTnnAHBNkHQui39LCQ%22%3B; PHPSESSID=v8fm7sl79rud5rt2b7sq02bek1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Perl64\\site\\bin;C:\\Perl64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;C:\\wamp\\bin\\php\\php5.4.12;C:\\Program Files (x86)\\nodejs\\;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.4 (Win64) PHP/5.4.12'
+    'SERVER_NAME' => '192.168.1.94'
+    'SERVER_ADDR' => '192.168.1.94'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.115'
+    'DOCUMENT_ROOT' => 'C:/wamp/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp/www'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp/www/yump-new/yiiuserplugin/backend/web/index.php'
+    'REMOTE_PORT' => '52578'
+    'REDIRECT_URL' => '/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yump-new/yiiuserplugin/backend/web/group-permission/index'
+    'SCRIPT_NAME' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'PHP_SELF' => '/yump-new/yiiuserplugin/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1423217487.676
+    'REQUEST_TIME' => 1423217487
+]

@@ -32,8 +32,8 @@ class GroupPermissionController extends Controller{
     public function actionIndex()
     {
 		if(!empty($_POST['permission'])){
-			echo '<pre>';
-			print_r($_POST);
+			//echo '<pre>';
+			//print_r($_POST);
 			
 			$mainChild = array();
 			$mainChild = $_POST['permission_child'];
@@ -157,40 +157,61 @@ class GroupPermissionController extends Controller{
 	
 	public function actionGetRolePermission(){
 		$this->layout = false;
+		$roleChild = array();
+		$mainChildAction = array();
+		$childChildAction = array();
 		if(Yii::$app->request->isAjax){
-            $AuthItemAction = AuthItem::find()->where(['type' => 2])->andWhere('name like :name or name like :name1 or name like :name2',[':name'=>"common%", ':name1'=>"frontend%", ':name2'=>"backend%"])->asArray()->all();
-			$queryData = AuthItem::find()->where(['type' => 1])->andWhere('name != :name', ['name'=>$_POST['id']])->asArray()->all();
-			$queryData1 = AuthItemChild::find()->where(['parent' => $_POST['id']])->asArray()->all();
-			$roleChild = array();
-			$mainChildAction = array();
-			$childChildAction = array();
-			if($queryData){
-				$AuthItemRole = array();
-				foreach($queryData as $key=>$value){
-					$AuthItemRole[$value['name']] = $value['name'];
+			if(empty($_POST['controllerMode']) && empty($_POST['controller'])){
+				$AuthItemAction = AuthItem::find()->where(['type' => 2])->andWhere('name like :name or name like :name1 or name like :name2',[':name'=>"common%", ':name1'=>"frontend%", ':name2'=>"backend%"])->asArray()->all();
+			}else{
+				if(!empty($_POST['controllerMode'])){
+					$condition = 'name like :name1';
+					$conditions[':name1'] = "".$_POST['controllerMode']."%";				
 				}
-				if($queryData1){
-					foreach($queryData1 as $key=>$value){
-						if(in_array($value['child'], $AuthItemRole)){
-							$roleChild[] = $value['child'];
-						}else{
-							$mainChildAction[] = $value['child'];
+				if(!empty($_POST['controller'])){
+					$condition = 'name like :name2';
+					$conditions[':name2'] = "%:".$_POST['controller'].":%";					
+				}
+				if(!empty($_POST['controllerMode']) && !empty($_POST['controller'])){
+					$condition = 'name like :name1 and name like :name2';
+				}
+				// echo '<pre>';
+				// print_r($condition);
+				// print_r($conditions);
+				// exit;
+				$AuthItemAction = AuthItem::find()->where(['type' => 2])->andWhere($condition, $conditions)->asArray()->all();
+			}
+			if(!empty($_POST['id'])){
+				$queryData = AuthItem::find()->where(['type' => 1])->andWhere('name != :name', ['name'=>$_POST['id']])->asArray()->all();
+				$queryData1 = AuthItemChild::find()->where(['parent' => $_POST['id']])->asArray()->all();
+				if($queryData){
+					$AuthItemRole = array();
+					foreach($queryData as $key=>$value){
+						$AuthItemRole[$value['name']] = $value['name'];
+					}
+					if($queryData1){
+						foreach($queryData1 as $key=>$value){
+							if(in_array($value['child'], $AuthItemRole)){
+								$roleChild[] = $value['child'];
+							}else{
+								$mainChildAction[] = $value['child'];
+							}
 						}
 					}
 				}
-			}
-			if($roleChild || !empty($_POST['child'])){
-				if(!empty($_POST['child'])){
-					$roleChild = explode(',', $_POST['child']);
-				}
-				$queryData2 = AuthItemChild::find()->where(['parent'=>$roleChild])->asArray()->all();
-				if($queryData2){
-					foreach($queryData2 as $key=>$value){
-						// if (strpos($value['child'],':') !== false) {
-							// $newVal = explode(':', $value['child']);
-							// $value['child'] = $newVal[2];
-						// }
-						$childChildAction[] = $value['child'];
+				if($roleChild || !empty($_POST['child'])){
+					if(!empty($_POST['child'])){
+						$roleChild = explode(',', $_POST['child']);
+					}
+					$queryData2 = AuthItemChild::find()->where(['parent'=>$roleChild])->asArray()->all();
+					if($queryData2){
+						foreach($queryData2 as $key=>$value){
+							// if (strpos($value['child'],':') !== false) {
+								// $newVal = explode(':', $value['child']);
+								// $value['child'] = $newVal[2];
+							// }
+							$childChildAction[] = $value['child'];
+						}
 					}
 				}
 			}
