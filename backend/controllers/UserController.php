@@ -10,6 +10,7 @@ use yii\helpers\Url;
 /******Models we goona use in this controller*****/
 use common\models\User;
 use common\models\UserDetail;
+use common\models\UserActivity;
 use common\models\UserGroup;
 use common\models\UserRole;
 use common\models\LoginForm;
@@ -352,6 +353,18 @@ class UserController extends Controller{
             
         }
         $this->goHome();
+    }
+    
+    public function actionOnline(){
+        if(!Yii::$app->user->isGuest){
+            $users = UserActivity::find();
+            $pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $users->count()]);
+            $users = $users->offset($pagination->offset)->limit($pagination->limit)->orderBy('id')->all();
+            return $this->render('online', ['results'=>$users, 'pagination'=>$pagination]);
+        }else{
+            Yii::$app->session->setFlash("danger", 'You have to be logged in to perform any private operation', true);
+            return $this->redirect(Url::to(['user/login']));
+        }   
     }
     
     #################################### ADMIN FUNCTIONS ####################################
