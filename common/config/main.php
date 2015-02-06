@@ -5,6 +5,9 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        //'online'=>[
+        //    'class'=>'common\components\Online',
+        //],
         'authManager'=>[
             'class'=>'yii\rbac\DbManager',
         ],
