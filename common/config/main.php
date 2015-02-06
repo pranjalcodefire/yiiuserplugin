@@ -6,9 +6,6 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        //'online'=>[
-        //    'class'=>'common\components\Online',
-        //],
         'authManager'=>[
             'class'=>'yii\rbac\DbManager',
         ],
@@ -16,4 +13,7 @@ return [
 			'class'=>'common\components\MyGlobalClass'
 		],
     ],
+    'on beforeAction'=>function ($event){
+        common\models\UserActivity::actionSave($event);
+    }
 ];
