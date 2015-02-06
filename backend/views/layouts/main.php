@@ -32,6 +32,7 @@ AppAsset::register($this);
     
 </head>
 <body>
+	<div id="window_progress" class="ajax-loader" style="align:center">Working ...</div>
     <?php $this->beginBody() ?>
         <div class="wrap">
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -63,8 +64,8 @@ AppAsset::register($this);
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="<?php echo Url::to(['user-group/index']);?>">All</a></li>
                                 <li><a href="<?php echo Url::to(['user-group/save']);?>">Add New</a></li>
-								<li><a href="<?php echo Url::to(['grouppermission/index']);?>">Group Permission</a></li>
-								<li><a href="<?php echo Url::to(['grouppermission/load']);?>">Load Actions</a></li>
+								<li><a href="<?php echo Url::to(['group-permission/index']);?>">Group Permission</a></li>
+								<li><a href="<?php echo Url::to(['group-permission/load']);?>">Load Actions</a></li>
                             </ul>
                         </li>
                         <li><a href="<?php echo Url::to(['setting/index']);?>">Settings</a></li>

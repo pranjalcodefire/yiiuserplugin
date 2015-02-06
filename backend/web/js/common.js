@@ -56,4 +56,77 @@ $('.ableToChangeStatus').click(function(){
         }    
     });
 
+$("#userRoleParent").change(function (){
+	var id = $(this).val();
+	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-child-role';
+	$.ajax({
+	   url:url,
+	   type:"POST",
+	   data:'id='+id,
+	   //dataType:'json',
+	   //beforeSend:function(){   $('.loading-img').show();  },
+	   success:function(response){
+			 $("#userRoleChild").html(response);
+				var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+				$.ajax({
+				   url:url,
+				   type:"POST",
+				   data:'id='+id,
+				   //dataType:'json',
+				   beforeSend:function(){   $('#window_progress').show();  },
+				   success:function(response){
+						 $("#permissionSectionBody tbody").html(response);
+				   },
+				   complete:function(){
+						$('#window_progress').hide();  
+				   },
+				   error:function(){ 
+						alert('There was a problem while requesting to delete the record. Please try again');   
+				   }
+				});
+	   },
+	   complete:function(){
+			//$('.loading-img').hide();   
+	   },
+	   error:function(){ 
+			alert('There was a problem while requesting to delete the record. Please try again');   
+	   }
+	});
+});
+
+
+$("#userRoleChild").click(function (){
+	var parentId = $("#userRoleParent").val();
+	var childId = $(this).val();
+	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+	$.ajax({
+	   url:url,
+	   type:"POST",
+	   data:'id='+parentId+'&child='+childId,
+	   //dataType:'json',
+	   beforeSend:function(){   $('#window_progress').show();  },
+	   success:function(response){
+			 $("#permissionSectionBody tbody").html(response);
+	   },
+	   complete:function(){
+			$('#window_progress').hide();  
+	   },
+	   error:function(){ 
+			alert('There was a problem while requesting to delete the record. Please try again');   
+	   }
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
