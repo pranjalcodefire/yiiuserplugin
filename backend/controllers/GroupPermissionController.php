@@ -32,11 +32,12 @@ class GroupPermissionController extends Controller{
     public function actionIndex()
     {
 		if(!empty($_POST['permission'])){
-			//echo '<pre>';
-			//print_r($_POST);
-			
 			$mainChild = array();
-			$mainChild = $_POST['permission_child'];
+			$childchildAction = array();
+			$mainChildAction = array();
+			if(!empty($_POST['permission_child'])){
+				$mainChild = $_POST['permission_child'];
+			}
 			$mainChildarray = array();
 			if($mainChild){
 				$i = 0;
@@ -45,16 +46,18 @@ class GroupPermissionController extends Controller{
 						$mainChildarray[$i]['child'] = $value;
 						$i++;
 				}
-			}
-			$queryData2 = AuthItemChild::find()->where(['parent'=>$_POST['permission_child']])->asArray()->all();
-			$childchildAction = array();
-			if($queryData2){
-				foreach($queryData2 as $key=>$value){
-					$childchildAction[] = $value['child'];
+				$queryData2 = AuthItemChild::find()->where(['parent'=>$_POST['permission_child']])->asArray()->all();
+				if($queryData2){
+					foreach($queryData2 as $key=>$value){
+						$childchildAction[] = $value['child'];
+					}
 				}
 			}
+			
+			
+			
 			$possibleChild = array_keys($_POST);
-			$mainChildAction = array();
+			
 			$j = 0;
 			foreach($possibleChild as $key=>$value){
 				if (strpos($value,':') !== false) {
@@ -66,8 +69,12 @@ class GroupPermissionController extends Controller{
 				}
 			}
 			AuthItemChild::deleteAll('parent = :parent', [':parent' => $_POST['permission']]);
-			Yii::$app->db->createCommand()->batchInsert('auth_item_child', ['parent', 'child'], $mainChildarray)->execute();
-			Yii::$app->db->createCommand()->batchInsert('auth_item_child', ['parent', 'child'], $mainChildAction)->execute();
+			if($mainChildarray){
+				Yii::$app->db->createCommand()->batchInsert('auth_item_child', ['parent', 'child'], $mainChildarray)->execute();
+			}
+			if($mainChildAction){
+				Yii::$app->db->createCommand()->batchInsert('auth_item_child', ['parent', 'child'], $mainChildAction)->execute();
+			}
 			$this->redirect(Url::to(['group-permission/index']));
 		}
 		$AuthItemAction = AuthItem::find()->where(['type' => 2])->andWhere('name like :name or name like :name1 or name like :name2',[':name'=>"common%", ':name1'=>"frontend%", ':name2'=>"backend%"])->asArray()->all();
@@ -215,6 +222,8 @@ class GroupPermissionController extends Controller{
 					}
 				}
 			}
+			// print_r($childChildAction);
+			// print_r($mainChildAction); exit;
 			return $this->render('role-permission', ['allAuthItem' => $AuthItemAction, 'childChildAction'=>$childChildAction, 'mainChildAction'=>$mainChildAction]);
         }
 	}

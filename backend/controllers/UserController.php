@@ -33,6 +33,10 @@ class UserController extends Controller{
     
     #################################### ADMIN FUNCTIONS ####################################
     
+	
+	public function actionPermissionDenied(){
+		return $this->render('permission-denied');
+	}
     /**
      * To get log in the user
      * @return : to home url (the logged in user)
