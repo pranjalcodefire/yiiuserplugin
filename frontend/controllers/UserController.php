@@ -311,6 +311,16 @@ class UserController extends Controller{
     
     ####################################  PROTECTED FUNCTIONS ####################################
     
+//    public function beforeAction($action) {
+//        if(parent::beforeAction($action)){
+//            echo "<pre>";print_r($action);
+//            echo "<pre>";print_r($action->controller->id);
+//            echo "<pre>";print_r($action->id);die;
+//            return true;
+//        }
+//        return false;
+//    }
+    
     protected function uploadFile($model, $filePath){
         $file = \yii\web\UploadedFile::getInstance($model, 'file');
         if(isset($file) && !empty($file)){
@@ -318,6 +328,8 @@ class UserController extends Controller{
             $model->userDetail->photo = $file->name;
         }    
     }
+    
+    
     
     #################################### PROTECTED FUNCTIONS ####################################
     
