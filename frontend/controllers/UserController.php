@@ -302,6 +302,15 @@ class UserController extends Controller{
         return $this->redirect(['user/my-profile']);
     }
     
+    public function actionClearCache(){
+        if(Yii::$app->cache->flush()){
+            Yii::$app->session->setFlash("success", 'Cache has been cleared successfully', true);
+        }else{
+            Yii::$app->session->setFlash("danger", 'Cache NOT cleared successfully. Please try again', true);
+        }   
+        return $this->redirect(Url::to(['user/dashboard']));
+    }
+    
        
     #################################### USER FUNCTIONS ####################################
     

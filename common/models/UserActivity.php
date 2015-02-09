@@ -13,7 +13,6 @@ class UserActivity extends ActiveRecord{
     }
     
     public static function actionSave($event){
-        $list = UserActivity::find();
         UserActivity::deleteAll("(unix_timestamp(now()) - created_at) > :abc or logout = 1", [':abc'=>VIEW_ONLINE_USER_TIME*60]);
         
         $ip = (isset($_SERVER['REMOTE_ADDR'])) ? $_SERVER['REMOTE_ADDR'] : "";

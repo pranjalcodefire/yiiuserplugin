@@ -1,6 +1,7 @@
 <?php 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use frontend\widgets\Alert;
 ?>
 <style>
     a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active{
@@ -11,7 +12,11 @@ use yii\helpers\Html;
 </style>
 <span>Hi <?php echo Html::encode($model->first_name); ?></span></span>
 <div class="row">
-    
+    <div class=" col-md-12">
+        <?php echo Alert::widget();?>
+    </div>
+</div>
+<div class="row">
     <div class=" col-md-2">
         <a href="<?php echo Url::to(['user/my-profile']);?>" class="thumbnail" title='My Profile'>
             My Profile
