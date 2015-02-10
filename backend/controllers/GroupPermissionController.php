@@ -32,7 +32,6 @@ class GroupPermissionController extends Controller{
     public function actionIndex()
     {
 		if(!empty($_POST['permission'])){
-			//echo '<pre>'; print_r($_POST); exit;
 			$mainChild = array();
 			$childchildAction = array();
 			$mainChildAction = array();
@@ -111,7 +110,8 @@ class GroupPermissionController extends Controller{
     }
     
     public function actionLoad(){
-		$base_path = 'C:\wamp\www\yii_feb\yiiuserplugin';
+		$base_path = Yii::$app->basePath;
+		$base_path = substr($base_path, 0, -8);
 		$fileType = 'Controller.php';
 		$baseController = 'yii\web\Controller';
 		$dirName = array('common', 'backend', 'frontend');
