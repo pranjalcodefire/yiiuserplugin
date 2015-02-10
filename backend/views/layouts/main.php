@@ -61,11 +61,11 @@ AppAsset::register($this);
                                 <li><a href="<?php echo Url::to(['user/online']);?>">Online users</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups</a>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Roles</a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="<?php echo Url::to(['user-group/index']);?>">All</a></li>
                                 <li><a href="<?php echo Url::to(['user-group/save']);?>">Add New</a></li>
-								<li><a href="<?php echo Url::to(['group-permission/index']);?>">Group Permission</a></li>
+								<li><a href="<?php echo Url::to(['group-permission/index']);?>">Role Permission</a></li>
 								<li><a href="<?php echo Url::to(['group-permission/load']);?>">Load Actions</a></li>
                             </ul>
                         </li>

@@ -10,6 +10,18 @@ return [
             'class'=>'yii\rbac\DbManager',
 			'defaultRoles' => ['guest']
         ],
+        'urlManagerBackend' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '/yump/yiiuserplugin/backend/web',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
+        'urlManagerFrontend' => [
+            'class' => 'yii\web\urlManager',
+            'baseUrl' => '/yump/yiiuserplugin/frontend/web',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
 //		'MyGlobalClass'=>[
 //			'class'=>'common\components\MyGlobalClass'
 //		],

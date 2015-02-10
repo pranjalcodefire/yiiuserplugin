@@ -6,7 +6,7 @@ use yii\widgets\ActiveForm;
 use yii\widgets\LinkPager;
 use frontend\widgets\Alert;
 
-$this->title = 'All Groups';
+$this->title = 'All Roles';
 ?>
 <div class="col-md-12">
 <!--    <h4>All Groups</h4><hr>-->

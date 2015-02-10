@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use frontend\widgets\Alert;
 
-$this->title = 'Add Group';
+$this->title = 'Add Role';
 ?>
 <div class="row">
     <div class="col-md-12">

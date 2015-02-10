@@ -304,11 +304,11 @@ class UserController extends Controller{
     
     public function actionClearCache(){
         if(Yii::$app->cache->flush()){
-            Yii::$app->session->setFlash("success", 'Cache has been cleared successfully', true);
+            Yii::$app->session->setFlash("success", 'Frontend cache has been cleared successfully', true);
         }else{
-            Yii::$app->session->setFlash("danger", 'Cache NOT cleared successfully. Please try again', true);
+            Yii::$app->session->setFlash("danger", 'Frontend cache NOT cleared successfully. Please try again', true);
         }   
-        return $this->redirect(Url::to(['user/dashboard']));
+        return $this->redirect(Yii::$app->urlManagerBackend->createUrl(['user/dashboard']));
     }
     
        

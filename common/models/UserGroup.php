@@ -15,7 +15,7 @@ class UserGroup extends \yii\db\ActiveRecord{
     public function rules(){
         return [
             [['name'], 'required', 'on'=>'userGroup'],
-            ['name', 'unique', 'targetClass' => '\common\models\UserGroup', 'message' => 'Group name already exists', 'on'=>'userGroup'],
+            ['name', 'unique', 'targetClass' => '\common\models\UserGroup', 'message' => 'Role name already exists', 'on'=>'userGroup'],
         ];
     }
     

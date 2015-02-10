@@ -25,6 +25,14 @@ $this->title = 'Dashboard';
           </div>
       </a>
     </div>
+    <div class=" col-md-2">
+      <a href="<?php echo Url::to(['user/save']);?>" class="thumbnail" title='Add User'>
+          <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+          <div class="caption text-center">
+            <h5>Add User</h5>
+          </div>
+      </a>
+    </div>
     <div class="col-md-2">
         <a href="<?php echo Url::to(['user/index']);?>" class="thumbnail" title='All Users'>
           <img alt="100%x180" src="<?php echo Yii::$app->homeUrl;?>/plugin-images/all-users.jpg" class="dashboard-thumbnails">
@@ -34,26 +42,18 @@ $this->title = 'Dashboard';
       </a>
     </div>
     <div class=" col-md-2">
-      <a href="<?php echo Url::to(['user/save']);?>" class="thumbnail" title='Add User'>
+      <a href="<?php echo Url::to(['user-group/save']);?>" class="thumbnail" title='Add Role'>
           <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
           <div class="caption text-center">
-            <h5>Add User</h5>
+            <h5>Add Role</h5>
           </div>
       </a>
     </div>
     <div class=" col-md-2">
-      <a href="<?php echo Url::to(['user-group/save']);?>" class="thumbnail" title='All Groups'>
+      <a href="<?php echo Url::to(['user-group/index']);?>" class="thumbnail" title='All Roles'>
           <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
           <div class="caption text-center">
-            <h5>Add Group</h5>
-          </div>
-      </a>
-    </div>
-    <div class=" col-md-2">
-      <a href="<?php echo Url::to(['user-group/index']);?>" class="thumbnail" title='Add Group'>
-          <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
-          <div class="caption text-center">
-            <h5>All Groups</h5>
+            <h5>All Roles</h5>
           </div>
       </a>
     </div>
@@ -68,10 +68,18 @@ $this->title = 'Dashboard';
 </div>
 <div class="row">
     <div class=" col-md-2">
-        <a href="<?php echo Url::to(['user/clear-cache']);?>" class="thumbnail" title='Flush Cache'>
+        <a href="<?php echo Url::to(['user/clear-cache']);?>" class="thumbnail" title='Flush Cache(Backend)'>
             <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
             <div class="caption text-center">
-              <h5>Flush Cache</h5>
+              <h5>Flush Cache (B)</h5>
+            </div>
+        </a>
+    </div>
+    <div class=" col-md-2">
+        <a href="<?php echo Yii::$app->urlManagerFrontend->createUrl(['user/clear-cache']);?>" class="thumbnail" title='Flush Cache(Frontend)'>
+            <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+            <div class="caption text-center">
+              <h5>Flush Cache (F)</h5>
             </div>
         </a>
     </div>
