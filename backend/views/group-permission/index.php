@@ -15,7 +15,7 @@
 		</div>
 		<div class="col-md-5">
 			<?php $controllerMode = array(0=>'Select Mode', 'backend'=>'backend', 'frontend'=>'frontend');
-				echo Html::dropDownList('mode', $selection = null, $controllerMode, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'allControllerMode']); 
+				echo Html::dropDownList('mode_name', $selection = null, $controllerMode, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'allControllerMode']); 
 			?>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 						$allController[$name[1]] = $name[1].' controller';
 					}
 				}
-				echo Html::dropDownList('mode', $selection = null, $allController, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'allControllerFilter']); 
+				echo Html::dropDownList('controller_name', $selection = null, $allController, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'allControllerFilter']); 
 			?>
 		</div>
 	</div>

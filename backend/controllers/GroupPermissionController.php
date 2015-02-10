@@ -32,6 +32,7 @@ class GroupPermissionController extends Controller{
     public function actionIndex()
     {
 		if(!empty($_POST['permission'])){
+			//echo '<pre>'; print_r($_POST); exit;
 			$mainChild = array();
 			$childchildAction = array();
 			$mainChildAction = array();
@@ -53,11 +54,7 @@ class GroupPermissionController extends Controller{
 					}
 				}
 			}
-			
-			
-			
 			$possibleChild = array_keys($_POST);
-			
 			$j = 0;
 			foreach($possibleChild as $key=>$value){
 				if (strpos($value,':') !== false) {
@@ -68,7 +65,33 @@ class GroupPermissionController extends Controller{
 					}
 				}
 			}
-			AuthItemChild::deleteAll('parent = :parent', [':parent' => $_POST['permission']]);
+			
+			if(empty($_POST['mode_name']) && empty($_POST['controller_name'])){
+				AuthItemChild::deleteAll('parent = :parent', [':parent' => $_POST['permission']]);
+			}else{
+				$conditions[':parent'] = $_POST['permission'];	
+				if(!empty($_POST['mode_name'])){
+					$condition = 'parent = :parent and child like :child';
+					$conditions[':child'] = "".$_POST['mode_name']."%";				
+				}
+				if(!empty($_POST['controller_name'])){
+					$condition = 'parent = :parent and child like :child';
+					$conditions[':child'] = "%:".$_POST['controller_name'].":%";					
+				}
+				if(!empty($_POST['mode_name']) && !empty($_POST['controller_name'])){
+					$condition = 'parent = :parent and child like :child';
+					$conditions[':child'] = "".$_POST['mode_name'].":".$_POST['controller_name'].":%";
+				}
+				AuthItemChild::deleteAll($condition, $conditions);
+				if(!empty($_POST['permission_child'])){
+					$inArray = array();
+					foreach($_POST['permission_child'] as $key=>$value){
+						$inArray[] = '"'.$value.'"';
+					}
+					$newInArray = implode(",", $inArray);
+					AuthItemChild::deleteAll('parent = :parent and child in ('.$newInArray.')', [':parent' => $_POST['permission']]);
+				}
+			}
 			if($mainChildarray){
 				Yii::$app->db->createCommand()->batchInsert('auth_item_child', ['parent', 'child'], $mainChildarray)->execute();
 			}
@@ -134,7 +157,23 @@ class GroupPermissionController extends Controller{
 				$AuthItem->save();
 			}
 		}
-		return $this->render('groupPermission', ['allFunctionList' => $allFunctionList]);
+		return $this->render('group-permission', ['allFunctionList' => $allFunctionList]);
+	}
+	
+	public function actionGetChild($parent=null){
+		$childArray = array();
+		$data = AuthItemChild::getChild($parent, $childArray);
+		echo '<pre>';
+		print_r($data);
+		exit;
+	}
+	
+	public function actionGetParent($child=null){
+		$parentArray = array();
+		$data = AuthItemChild::getParent($child, $parentArray);
+		echo '<pre>';
+		print_r($data);
+		exit;
 	}
 	
 	#################################### AJAX FUNCTIONS ####################################
@@ -142,20 +181,27 @@ class GroupPermissionController extends Controller{
 	public function actionGetChildRole(){
 		$this->layout = false;
 		if(Yii::$app->request->isAjax){
-            $queryData = AuthItem::find()->where(['type' => 1])->andWhere('name != :name', ['name'=>$_POST['id']])->asArray()->all();
-			$queryData1 = AuthItemChild::find()->where(['parent' => $_POST['id']])->asArray()->all();
+			$parentData = AuthItemChild::getParent($_POST['id'], $parentArray);
+			$inArray = array();
+			$inArray[] = '"'.$_POST['id'].'"';
+			if($parentData){
+				foreach($parentData as $key=>$value){
+					$inArray[] = '"'.$value.'"';
+				}
+				
+			}
+			$newInArray = implode(",", $inArray);
+		
+            $queryData = AuthItem::find()->where(['type' => 1])->andWhere('name != :name and name not in ('.$newInArray.')', [':name'=>$_POST['id']])->asArray()->all();
 			$roleChild = array();
+			$childData = AuthItemChild::getChild($_POST['id'], $childArray);
+			if($childData){
+				$roleChild = $childData;
+			}
 			if($queryData){
 				$AuthItemRole = array();
 				foreach($queryData as $key=>$value){
 					$AuthItemRole[$value['name']] = $value['name'];
-				}
-				if($queryData1){
-					foreach($queryData1 as $key=>$value){
-						if(in_array($value['child'], $AuthItemRole)){
-							$roleChild[] = $value['child'];
-						}
-					}
 				}
 				return $this->render('role-selected', ['AuthItemRole' => $AuthItemRole, 'roleChild'=>$roleChild]);
 			}
@@ -182,15 +228,16 @@ class GroupPermissionController extends Controller{
 				if(!empty($_POST['controllerMode']) && !empty($_POST['controller'])){
 					$condition = 'name like :name1 and name like :name2';
 				}
-				// echo '<pre>';
-				// print_r($condition);
-				// print_r($conditions);
-				// exit;
 				$AuthItemAction = AuthItem::find()->where(['type' => 2])->andWhere($condition, $conditions)->asArray()->all();
 			}
 			if(!empty($_POST['id'])){
 				$queryData = AuthItem::find()->where(['type' => 1])->andWhere('name != :name', ['name'=>$_POST['id']])->asArray()->all();
 				$queryData1 = AuthItemChild::find()->where(['parent' => $_POST['id']])->asArray()->all();
+				$roleChild = array();
+				$childData = AuthItemChild::getChild($_POST['id'], $childArray);
+				if($childData){
+					$roleChild = $childData;
+				}
 				if($queryData){
 					$AuthItemRole = array();
 					foreach($queryData as $key=>$value){
@@ -198,9 +245,7 @@ class GroupPermissionController extends Controller{
 					}
 					if($queryData1){
 						foreach($queryData1 as $key=>$value){
-							if(in_array($value['child'], $AuthItemRole)){
-								$roleChild[] = $value['child'];
-							}else{
+							if(!in_array($value['child'], $AuthItemRole)){
 								$mainChildAction[] = $value['child'];
 							}
 						}
@@ -222,8 +267,6 @@ class GroupPermissionController extends Controller{
 					}
 				}
 			}
-			// print_r($childChildAction);
-			// print_r($mainChildAction); exit;
 			return $this->render('role-permission', ['allAuthItem' => $AuthItemAction, 'childChildAction'=>$childChildAction, 'mainChildAction'=>$mainChildAction]);
         }
 	}

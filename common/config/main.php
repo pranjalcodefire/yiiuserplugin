@@ -8,6 +8,7 @@ return [
         ],
         'authManager'=>[
             'class'=>'yii\rbac\DbManager',
+			'defaultRoles' => ['guest']
         ],
 		'MyGlobalClass'=>[
 			'class'=>'common\components\MyGlobalClass'

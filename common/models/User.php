@@ -417,12 +417,11 @@ class User extends ActiveRecord implements IdentityInterface
 		$className = $class[2];
 		$className = substr($className, 0, -10);
 		$dbAction = $mode.':'.$className.':'.$methodName;
-		$status = false;
+		$status = true;
 		if (Yii::$app->user->can($dbAction)) {
 			$status = true;
 		}
-		//print_r($methodName); exit;
-		if($methodName=='PermissionDenied' || $methodName=='Login'){
+		if($methodName=='PermissionDenied'){
 			return true;
 		}else{
 			return $status;

@@ -13,6 +13,32 @@ class AuthItemChild extends \yii\db\ActiveRecord
     {
         return 'auth_item_child';
     }
+	
+	public static function getChild($parent=null, &$childArray){
+		$queryData1 = AuthItemChild::find()->where(['parent' => $parent])->andWhere('child not like :child1 and child not like :child2', [':child1'=>'backend:%', ':child2'=>'frontend:%'])->asArray()->all();
+		if($queryData1){
+			foreach($queryData1 as $key=>$value){
+				$childArray[] = $value['child'];
+				self::getChild($value['child'], $childArray);
+			}
+		}
+		if($childArray){
+			return array_unique($childArray);
+		}
+	 }
+	 
+	public static function getParent($child=null, &$parentArray){
+		$queryData1 = AuthItemChild::find()->where(['child' => $child])->andWhere('parent not like :parent1 and parent not like :parent2', [':parent1'=>'backend:%', ':parent2'=>'frontend:%'])->asArray()->all();
+		if($queryData1){
+			foreach($queryData1 as $key=>$value){
+				$parentArray[] = $value['parent'];
+				self::getParent($value['parent'], $parentArray);
+			}
+		}
+		if($parentArray){
+			return array_unique($parentArray);
+		}
+	 }
 }
 
 ?>
