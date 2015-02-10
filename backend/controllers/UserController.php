@@ -371,6 +371,15 @@ class UserController extends Controller{
         }   
     }
     
+    
+    public function actionClearCache(){
+        if(Yii::$app->cache->flush()){
+            Yii::$app->session->setFlash("success", 'Cache has been cleared successfully', true);
+        }else{
+            Yii::$app->session->setFlash("danger", 'Cache NOT cleared successfully. Please try again', true);
+        }   
+        return $this->redirect(Url::to(['user/dashboard']));
+    }
     #################################### ADMIN FUNCTIONS ####################################
     
     
@@ -392,6 +401,36 @@ class UserController extends Controller{
             }    
         }
     }
+    
+    public function actionStatusUser()
+    {
+        if(Yii::$app->request->isAjax){
+            $model = User::findOne($_POST['id']);
+            $modelActivity = UserActivity::findOne(['user_id'=>$_POST['id']]);
+            if(isset($model) && !empty($model)){
+                $model->status = ($model->status == ACTIVE) ? INACTIVE : ACTIVE;
+                $modelActivity->status = $model->status;
+                $model->scenario = 'statusChange';
+                Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                return ($model->update() & $modelActivity->update()) ? ['status'=>'success', 'recordStatus'=>$model->status] : ['status'=>'failure'];
+                
+            }    
+        }
+    }
+    
+    public function actionLogoutUser()
+    {
+        if(Yii::$app->request->isAjax){
+            $model = UserActivity::findOne(['user_id'=>$_POST['id']]);
+            if(isset($model) && !empty($model)){
+                $model->logout= ACTIVE;
+                Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+                return ($model->update()) ? ['status'=>'success', 'recordLoggedout'=>$model->logout] : ['status'=>'failure'];
+                
+            }    
+        }
+    }
+    
     
     public function actionDelete()
     {

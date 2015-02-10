@@ -29,7 +29,7 @@ $this->title = 'All User Activities';
       </thead>
       <tbody>
         <?php foreach($results as $result): ?>
-            <tr class="<?php echo ($result->status == ACTIVE) ? 'success' : 'danger'; ?>" id="rowId<?php echo $result->id;?>">
+            <tr class="<?php echo ($result->status == ACTIVE) ? 'success' : 'danger'; ?>" id="rowId<?php echo $result->user_id;?>">
                 <td><?php echo Html::encode($result->user_id);?></td>
                 <td><?php echo !empty($result->name) ? Html::encode($result->name) : 'Guest';?></td>
                 <td><?php echo !empty($result->username) ? Html::encode($result->username) : NOT_FOUND_TEXT;?></td>
@@ -39,20 +39,14 @@ $this->title = 'All User Activities';
                 <td><?php echo Html::encode($result->ip_address);?></td>
                 <td><?php echo date(DATE_FORMAT, ($result->created_at));?></td>
                 <td>
-                    <?php 
-                       /* $statusClass = Html::encode($result->status == ACTIVE) ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-ban-circle';
+                    <?php if($result->user_id != Yii::$app->user->getId()){
+                        $statusClass = Html::encode($result->status == ACTIVE) ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-ban-circle';
                         $status = Html::encode($result->status == ACTIVE) ? 'Inactive' : 'Active';
-                        echo Html::a('<span class="'.$statusClass.'"></span>', 'javascript:void(0)', ['class'=>'ableToChangeStatus', 'id'=>'ableToChangeStatus'.$result->id, 'url'=>Url::to([Yii::$app->controller->id."/status"]), 'title'=>'Make this user '.$status]);
-                        * */
+                        echo Html::a('<span class="'.$statusClass.'"></span>', 'javascript:void(0)', ['class'=>'ableToChangeStatus', 'id'=>'ableToChangeStatus'.$result->user_id, 'url'=>Url::to([Yii::$app->controller->id."/status-user"]), 'title'=>'Make this user '.$status]);
+                        echo Html::a('<span class="glyphicon glyphicon-off" style="margin-left:5px;"></span>', 'javascript:void(0)', ['class'=>'ableToLogoutUser', 'id'=>'ableToLogoutUser'.$result->user_id, 'url'=>Url::to([Yii::$app->controller->id."/logout-user"]), 'title'=>'Logout this user']);
+                    }
                     ?>
-                    <?php //echo Html::a('<span class="glyphicon glyphicon-file"></span>', Url::to(['user/view', 'id'=>$result->id]), ['title'=>'View User Profile']);?>
-                    <?php //echo Html::a('<span class="glyphicon glyphicon-edit"></span>', Url::to(['user/edit', 'id'=>$result->id]), ['title'=>'Edit User Details']);?>
-                    <?php //echo Html::a('<span class="glyphicon glyphicon-remove-circle"></span>', 'javascript:void(0)', ['title'=>'Delete this User', 'class'=>'ableToDelete', 'id'=>'ableToDelete'.$result->id,  'url'=>Url::to([Yii::$app->controller->id."/delete"])]);?>
-                    <?php /*if(Html::encode($result->email_verified) == NOT_VERIFIED) { 
-                        echo Html::a('<span class="glyphicon glyphicon-exclamation-sign"></span>', 'javascript:void(0)', ['title'=>'Verify User Email', 'class'=>'ableToVerifyEmail', 'id'=>'ableToVerifyEmail'.$result->id]);
-                    }*/?>
-                    <?php //echo Html::a('<span class="glyphicon glyphicon-lock"></span>', Url::to(['user/change-user-password', 'id'=>$result->id]), ['title'=>'Change User\'s Password']);?>
-                    <?php //echo Html::a('<span class="glyphicon glyphicon-lock"></span>', Url::to(['user/edit-permissions', 'id'=>$result->id]), ['title'=>'View User Permissions']);?>
+                    <?php ?>
                 </td>
             </tr>
         <?php $i++;endforeach; ?>

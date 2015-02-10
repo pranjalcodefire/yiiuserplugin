@@ -1,6 +1,7 @@
 <?php 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use frontend\widgets\Alert;
 
 $this->title = 'Dashboard';
 ?>
@@ -11,7 +12,11 @@ $this->title = 'Dashboard';
 </style>
 <span>Hi <?php echo Html::encode($model->username); ?></span>
 <div class="row">
-    
+    <div class=" col-md-12">
+        <?php echo Alert::widget();?>
+    </div>
+</div>
+<div class="row">
     <div class=" col-md-2">
         <a href="<?php echo Url::to(['user/my-profile']);?>" class="thumbnail" title='My Profile'>
           <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/profile.jpg" class="dashboard-thumbnails">
@@ -60,7 +65,22 @@ $this->title = 'Dashboard';
           </div>
       </a>
     </div>
-    
 </div>
-
-
+<div class="row">
+    <div class=" col-md-2">
+        <a href="<?php echo Url::to(['user/clear-cache']);?>" class="thumbnail" title='Flush Cache'>
+            <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+            <div class="caption text-center">
+              <h5>Flush Cache</h5>
+            </div>
+        </a>
+    </div>
+    <div class=" col-md-2">
+        <a href="<?php echo Url::to(['user/online']);?>" class="thumbnail" title='Online Users'>
+            <img alt="100%x180" src="<?php echo Yii::$app->homeUrl; ?>/plugin-images/add-user.jpg" class="dashboard-thumbnails">
+            <div class="caption text-center">
+              <h5>Online Users</h5>
+            </div>
+        </a>
+    </div>
+</div>

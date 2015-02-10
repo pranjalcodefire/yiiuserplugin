@@ -58,6 +58,7 @@ AppAsset::register($this);
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="<?php echo Url::to(['user/index']);?>">All</a></li>
                                 <li><a href="<?php echo Url::to(['user/save']);?>">Add New</a></li>
+                                <li><a href="<?php echo Url::to(['user/online']);?>">Online users</a></li>
                             </ul>
                         </li>
                         <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups</a>
