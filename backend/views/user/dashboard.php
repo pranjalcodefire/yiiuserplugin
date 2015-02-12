@@ -10,7 +10,7 @@ $this->title = 'Dashboard';
         background-color: rgb(232, 233, 237);
     }
 </style>
-<span>Hi <?php echo Html::encode($model->username); ?></span>
+<span><h4>Hi <?php echo Html::encode($model->username); ?></h4></span>
 <div class="row">
     <div class=" col-md-12">
         <?php echo Alert::widget();?>

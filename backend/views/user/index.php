@@ -48,7 +48,7 @@ $this->title = 'All Users';
                     <?php echo Html::a('<span class="glyphicon glyphicon-file"></span>', Url::to(['user/view', 'id'=>$result->id]), ['title'=>'View User Profile']);?>
                     <?php echo Html::a('<span class="glyphicon glyphicon-edit"></span>', Url::to(['user/edit', 'id'=>$result->id]), ['title'=>'Edit User Details']);?>
                     <?php echo Html::a('<span class="glyphicon glyphicon-remove-circle"></span>', 'javascript:void(0)', ['title'=>'Delete this User', 'class'=>'ableToDelete', 'id'=>'ableToDelete'.$result->id,  'url'=>Url::to([Yii::$app->controller->id."/delete"])]);?>
-                    <?php if(Html::encode($result->email_verified) == NOT_VERIFIED) { 
+                    <?php if(EMAIL_VERIFICATION && Html::encode($result->email_verified) == NOT_VERIFIED) { 
                         echo Html::a('<span class="glyphicon glyphicon-exclamation-sign"></span>', 'javascript:void(0)', ['title'=>'Verify User Email', 'class'=>'ableToVerifyEmail', 'id'=>'ableToVerifyEmail'.$result->id]);
                     }?>
                     <?php echo Html::a('<span class="glyphicon glyphicon-lock"></span>', Url::to(['user/change-user-password', 'id'=>$result->id]), ['title'=>'Change User\'s Password']);?>

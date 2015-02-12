@@ -12,8 +12,7 @@ $this->title = 'All Settings';
 <!--    <h4>All Settings</h4><hr>-->
     <?php echo Html::img(Yii::$app->homeUrl.'images/'.APP_IMAGES_DIRECTORY.'/'.AJAX_LOADING_BIG_IMAGE, ['class'=>'loading-img']);?>
     <?php echo Alert::widget();?>
-    <?php if(!empty($results)) { ?>
-    <?php echo Html::a('Add New', Url::to(['setting/save']), ['class'=>'btn btn-success pull-right btn-sm']);?>
+    <?php if(!empty($results)) { $i = (intval($pagination->offset) + 1);?>
     <table class="table table-hover table-bordered">
       <thead>
         <tr>
@@ -25,7 +24,7 @@ $this->title = 'All Settings';
       </thead>
       <tbody>
         <?php //echo "<pre>";print_r($results);die;?>
-        <?php  foreach($results as $result): ?>
+        <?php $i =1;foreach($results as $result):?>
             <tr class="success" id="rowId<?php echo $result->id;?>">
                 <td><?php echo Html::encode($result->id);?></td>
                 <td style="width:70%"><?php echo Html::encode($result->name_public);?></td>
@@ -40,12 +39,12 @@ $this->title = 'All Settings';
                     <?php echo Html::submitButton('Submit', ['class'=>'btn btn-sm btn-success ableToUpdateValue', 'id'=>'ableToUpdateValue'.$result->id]);?>
                 </td>
             </tr>
-        <?php endforeach; ?>
+        <?php $i++;endforeach; ?>
       </tbody>
     </table>
     <div class="pull-right">
-        
-    </div>    
+        <?php echo LinkPager::widget(['pagination'=>$pagination]);?>
+    </div> 
     <?php } ?>
 </div>
 <script>

@@ -3,7 +3,7 @@ return [
     'components' => [
         'db'=>[
             'class'=>'yii\db\Connection',
-            'dsn'=>'mysql:host=localhost;dbname=yii_git',
+            'dsn'=>'mysql:host=localhost;dbname=yii_git_copied',
             'username'=>'root',
             'password'=>'',
             'charset'=>'utf8'

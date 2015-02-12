@@ -1,4 +1,5 @@
 $('.datepicker').datepicker({dateFormat:"dd-mm-yy"});
+
 $('.ableToChangeStatus').click(function(){
     if(confirm('Are you sure ?')){ 
          var id = $(this).attr('id');
@@ -32,7 +33,8 @@ $('.ableToChangeStatus').click(function(){
          });
     }
  });
- $('.ableToDelete').click(function(){
+
+$('.ableToDelete').click(function(){
         if(confirm('Are you sure ?')){ 
             var id = $(this).attr('id');
             var url = $(this).attr('url');
@@ -58,7 +60,7 @@ $('.ableToChangeStatus').click(function(){
 
 $("#userRoleParent").change(function (){
 	var id = $(this).val();
-	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-child-role';
+	var url = $(this).attr('url');
 	$.ajax({
 	   url:url,
 	   type:"POST",
@@ -67,7 +69,7 @@ $("#userRoleParent").change(function (){
 	   //beforeSend:function(){   $('.loading-img').show();  },
 	   success:function(response){
 			 $("#userRoleChild").html(response);
-				var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+				var url = $("#userRoleChild").attr('url');
 				var allControllerMode = $("#allControllerMode").val();
 				var controller = $("#allControllerFilter").val();
 				$.ajax({
@@ -96,13 +98,12 @@ $("#userRoleParent").change(function (){
 	});
 });
 
-
 $("#userRoleChild").click(function (){
 	var parentId = $("#userRoleParent").val();
 	var childId = $(this).val();
 	var controller = $("#allControllerFilter").val();
 	var allControllerMode = $("#allControllerMode").val();
-	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+	var url = $(this).attr('url');
 	$.ajax({
 	   url:url,
 	   type:"POST",
@@ -126,7 +127,7 @@ $("#allControllerMode").change(function (){
 	var controller = $("#allControllerFilter").val();
 	var childRole = $("#userRoleChild").val();
 	var parentId = $("#userRoleParent").val();
-	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+	var url = $("#userRoleChild").attr('url');
 	$.ajax({
 	   url:url,
 	   type:"POST",
@@ -150,7 +151,7 @@ $("#allControllerFilter").change(function (){
 	var mode = $("#allControllerMode").val();
 	var childRole = $("#userRoleChild").val();
 	var parentId = $("#userRoleParent").val();
-	var url = '/yump-new/yiiuserplugin/backend/web/group-permission/get-role-permission';
+	var url = $("#userRoleChild").attr('url');
 	$.ajax({
 	   url:url,
 	   type:"POST",

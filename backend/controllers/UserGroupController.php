@@ -30,10 +30,10 @@ class UserGroupController extends Controller{
     public function actionIndex()
     {
         if(!Yii::$app->user->isGuest){
-            $results = UserGroup::find()->onCondition(['type'=>'1'])->orderBy('name')->all();   //Type 1 is for Role 
-            //$pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);
-            //$results = $results->offset($pagination->offset)->limit($pagination->limit)->orderBy('name')->all();
-            return $this->render('index', ['results'=>$results]); //'pagination'=>$pagination]
+            $results = UserGroup::find()->onCondition(['type'=>'1']);   //Type 1 is for Role (Type 2 is for permission)
+            $pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);
+            $results = $results->offset($pagination->offset)->limit($pagination->limit)->orderBy('name')->all();
+            return $this->render('index', ['results'=>$results, 'pagination'=>$pagination]);
         }else{
             Yii::$app->session->setFlash("danger", 'You have to be logged in to perform any private operation', true);
             $this->redirect(Url::to(['user/login']));

@@ -30,9 +30,10 @@ class SettingController extends Controller{
     {
         if(!Yii::$app->user->isGuest){
             $model = new Setting;
-            //$pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);
-            $results = $model->find()->orderBy('id')->all();
-            return $this->render('index', ['results'=>$results, 'model'=>$model]);
+            $results = $model->find();
+            $pagination = new Pagination(['defaultPageSize'=>DEFAULT_PAGE_SIZE, 'totalCount'=> $results->count()]);
+            $results = $results->offset($pagination->offset)->limit($pagination->limit)->orderBy('id')->all();
+            return $this->render('index', ['results'=>$results, 'model'=>$model, 'pagination'=>$pagination]);
         }else{
             Yii::$app->session->setFlash("danger", 'You have to be logged in to perform any private operation', true);
             $this->redirect(Url::to(['user/login']));

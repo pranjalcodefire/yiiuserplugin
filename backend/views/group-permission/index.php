@@ -1,6 +1,6 @@
 <?php 
 	use yii\helpers\Html;
-	
+	use yii\helpers\Url;
 	$this->title = 'Update Permission';
 ?>
 <div class="col-md-12">
@@ -8,12 +8,13 @@
 	
 	<div class="row">
 		<div class="col-md-2"><h4>Select Role</h4></div>
-		<div class="col-md-5">
+		<div class="col-md-4">
 			<?php 
-				echo Html::dropDownList('permission', $selection = null, $usersRole, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'userRoleParent']); 
+				echo Html::dropDownList('permission', $selection = null, $usersRole, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'userRoleParent', 'url'=>Url::to(['group-permission/get-child-role'])]); 
 			?>
 		</div>
-		<div class="col-md-5">
+        <div class="col-md-2"><h4>Filter by Mode</h4></div>
+		<div class="col-md-4">
 			<?php $controllerMode = array(0=>'Select Mode', 'backend'=>'backend', 'frontend'=>'frontend');
 				echo Html::dropDownList('mode_name', $selection = null, $controllerMode, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'id'=>'allControllerMode']); 
 			?>
@@ -21,14 +22,15 @@
 	</div>
 	<br><br>
 	<div class="row">
-		<div class="col-md-2"><h4>Select Role</h4></div>
-		<div class="col-md-5">
+		<div class="col-md-2"><h4>Select Children</h4></div>
+		<div class="col-md-4">
 			<?php 
 				unset($usersRole[0]);
-				echo Html::dropDownList('permission_child', $selection = null, $usersRole, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'multiple' => 'multiple', 'id'=>'userRoleChild']); 
+				echo Html::dropDownList('permission_child', $selection = null, $usersRole, $options = ['style'=>'padding: 5px; width: 200px; margin-top: 9px;', 'multiple' => 'multiple', 'id'=>'userRoleChild', 'url'=>Url::to(['group-permission/get-role-permission'])]); 
 			?>
 		</div>
-		<div class="col-md-5">
+        <div class="col-md-2"><h4>Filter by Controller</h4></div>
+		<div class="col-md-4">
 			<?php 
 				$allController = array();
 				$allController[0] = 'Select Controller';

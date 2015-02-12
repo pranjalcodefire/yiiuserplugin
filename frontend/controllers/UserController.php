@@ -155,7 +155,7 @@ class UserController extends Controller{
                     if($model->save(false)){
                         $modelUser->user_id = $model->id;
                         if($modelUser->save(false)){
-                            if(SEND_PASSWORD_CHANGE_MAIL){ 
+                            if(SEND_REGISTRATION_MAIL){ 
                                 User::sendMail('welcome-email', $model, $model->email, 'Welcome to - '.SITE_NAME);
                             }
                             Yii::$app->session->setFlash('success', 'You have been registered successfully');

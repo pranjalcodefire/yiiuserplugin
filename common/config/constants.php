@@ -21,7 +21,7 @@
     if(!defined("USER_PROFILE_DEFAULT_IMAGE")) {define("USER_PROFILE_DEFAULT_IMAGE", ((isset($allSettings['user_profile_default_image'])) ? $allSettings['user_profile_default_image']['value'] : 'user-default.jpg'));}  // Place this image under the directory USER_PROFILE_IMAGES_DIRECTORY
     if(!defined("APP_IMAGES_DIRECTORY")) {define("APP_IMAGES_DIRECTORY", ((isset($allSettings['app_images_directory'])) ? $allSettings['app_images_directory']['value'] : 'app_images'));}
     if(!defined("AJAX_LOADING_BIG_IMAGE")) {define("AJAX_LOADING_BIG_IMAGE", ((isset($allSettings['ajax_loading_big_image'])) ? $allSettings['ajax_loading_big_image']['value'] : 'circle-loading-animation.gif'));}
-    if(!defined("DEFAULT_STATUS_FOR_NEW_USER")) {define("DEFAULT_STATUS_FOR_NEW_USER", ((isset($allSettings['default_status_for_new_user'])) ? $allSettings['default_status_for_new_user']['value'] : 1));}
+    if(!defined("DEFAULT_STATUS_FOR_NEW_USER")) {define("DEFAULT_STATUS_FOR_NEW_USER", ((isset($allSettings['default_status_for_new_user'])) ? $allSettings['default_status_for_new_user']['value'] : ACTIVE));}
     
     
     

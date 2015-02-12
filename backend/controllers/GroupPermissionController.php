@@ -118,8 +118,8 @@ class GroupPermissionController extends Controller{
 		$cList = array();
 		$allFunctionList = array();
 		foreach($dirName as $key=>$value){
-			if(file_exists($base_path.'\\'.$value.'\controllers')){
-				$cList[$value] = scandir($base_path.'\\'.$value.'\controllers');
+			if(file_exists($base_path.'//'.$value.'/controllers')){
+				$cList[$value] = scandir($base_path.'//'.$value.'/controllers');
 			}
 		}
 		$parentMethodList = get_class_methods($baseController);
